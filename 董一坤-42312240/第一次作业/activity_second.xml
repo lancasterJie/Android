@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="SECOND_ACTIVITY"
+        android:gravity="center"
+        android:textSize="20dp"
+        />
+
+    <Button
+        android:id="@+id/btn_go_back_to_main_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="返回"
+        android:textSize="17dp"
+        />
+
+    <Button
+        android:id="@+id/btn_go_to_third_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="隐式跳转"
+        android:textSize="17dp"
+        />
+
+
+
+</LinearLayout>

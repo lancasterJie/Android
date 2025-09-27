@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="THIRD_ACTIVITY"
+        android:gravity="center"
+        android:textSize="20dp"
+        />
+
+    <EditText
+        android:id="@+id/et_input_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="随便写点什么"
+        />
+
+    <Button
+        android:id="@+id/btn_return_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="返回结果"
+        android:textSize="17dp"
+        />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="取消返回"
+        android:textSize="17dp"
+        />
+
+
+
+
+</LinearLayout>
