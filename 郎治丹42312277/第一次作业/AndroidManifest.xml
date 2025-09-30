@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.activitynavigator">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <!--
+            MainActivity - 应用的入口Activity
+            exported="true" 表示可以被其他应用启动
+         -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <!-- 定义这个Activity为主Activity -->
+                <action android:name="android.intent.action.MAIN" />
+
+                <!-- 定义这个Activity在启动器中显示 -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            SecondActivity - 用于演示显式跳转的中间Activity
+            exported="false" 表示只能被本应用内的组件启动
+         -->
+        <activity
+            android:name=".SecondActivity"
+            android:exported="false" />
+
+        <!--
+            ThirdActivity - 用于演示隐式跳转和带返回结果跳转的Activity
+            exported="false" 表示只能被本应用内的组件启动
+            同时配置了intent-filter支持隐式跳转
+         -->
+        <activity
+            android:name=".ThirdActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.example.action.VIEW_THIRD_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
