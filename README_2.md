@@ -31,7 +31,7 @@ app/
 
 ### 完整功能演示
 <video width="800" controls>
-  <source src="videos/effect.mp4" type="video/mp4">
+  <source src="effect.mp4" type="video/mp4">
 </video>
 
 ## 总结
