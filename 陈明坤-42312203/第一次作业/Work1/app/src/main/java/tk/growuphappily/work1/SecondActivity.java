@@ -21,7 +21,7 @@ public class SecondActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
+        // 隐式调用
         findViewById(R.id.implicit).setOnClickListener((view) -> {
             Intent intent = new Intent("ThirdActivity");
             startActivity(intent);

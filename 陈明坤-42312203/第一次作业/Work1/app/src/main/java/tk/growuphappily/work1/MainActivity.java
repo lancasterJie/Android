@@ -24,14 +24,17 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        // 显式调用
         findViewById(R.id.explicit).setOnClickListener((view) -> {
             Intent intent = new Intent(view.getContext(), SecondActivity.class);
             startActivity(intent);
         });
+        // 带返回值
         findViewById(R.id.forResult).setOnClickListener((view) -> {
             Intent intent = new Intent(view.getContext(), ThirdActivity.class);
             startActivityForResult(intent, ThirdActivity.REQ_CODE);
         });
+        // 长按监听器
         findViewById(R.id.forResult).setOnLongClickListener((view) -> {
             Toast.makeText(getApplicationContext(), "长按了带返回结果的跳转", Toast.LENGTH_LONG).show();
             return true;

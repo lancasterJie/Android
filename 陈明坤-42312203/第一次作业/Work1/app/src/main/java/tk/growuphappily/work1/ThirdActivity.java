@@ -14,7 +14,6 @@ public class ThirdActivity extends AppCompatActivity {
     public static final int RESULT_SUCCEED = 102;
     public static final int REQ_CODE = 101;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,12 +24,14 @@ public class ThirdActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         findViewById(R.id.ret).setOnClickListener((view) -> {
             Intent intent = new Intent();
             intent.putExtra("Ret", "1234");
             setResult(RESULT_SUCCEED, intent);
             finish();
         });
+
         findViewById(R.id.cancel).setOnClickListener((view) -> {
             setResult(Activity.RESULT_CANCELED);
             finish();
