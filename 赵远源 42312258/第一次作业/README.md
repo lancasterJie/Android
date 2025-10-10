@@ -28,12 +28,7 @@ Activity 跳转功能实现
 
 1. 布局设计：在`MainActivity`的布局文件中添加 “跳转到 SecondActivity” 按钮；在`SecondActivity`的布局文件中添加 “返回到主页” 按钮。
 
-   ![](./res/MainActivity中跳转到SecondActivity的Button.png)
-
    <center>MainActivity中跳转到SecondActivity的Button</center>
-
-   ![](./res/SecondActivity中返回到MainActivity的Button.png)
-
    <center>SecondActivity中返回到MainActivity的Button</center>
 
 2. 逻辑实现：
@@ -41,11 +36,7 @@ Activity 跳转功能实现
    - 在`MainActivity`中为跳转按钮设置点击事件，通过显式 Intent（`Intent(Context, Class)`）启动`SecondActivity`。
    - 在`SecondActivity`中为返回按钮设置点击事件，通过`finish()`方法关闭当前 Activity 并返回`MainActivity`。
 
-   ![](./res/MainActivity中通过显示Intent跳转到SecondActivity.png)
-
    <center>MainActivity中通过显示Intent跳转到SecondActivity</center>
-
-   ![](./res/SecondActivity中通过finish()方法返回MainActivity.png)
 
    <center>SecondActivity中通过finish()方法返回MainActivity</center>
 
@@ -53,7 +44,6 @@ Activity 跳转功能实现
 
 1. 布局设计：在`SecondActivity`的布局文件中添加 “隐式跳转” 按钮。
 
-![](./res/SecondActivity中通过隐式Intent跳转到ThirdActivity的Button.png)
 
 <center>SecondActivity中通过隐式Intent跳转到ThirdActivity的Button</center>
 
@@ -62,11 +52,8 @@ Activity 跳转功能实现
 - 在`SecondActivity`的点击事件中创建隐式 Intent，设置自定义 Action（如`"com.example.action.VIEW_THIRD_ACTIVITY"`）和默认 Category（`Intent.CATEGORY_DEFAULT`）。
 - 在`AndroidManifest.xml`中为`ThirdActivity`配置`<intent-filter>`，关联上述自定义 Action 和默认 Category。
 
-![](./res/为SecondActivity中隐式Intent跳转的Button添加事件监听.png)
 
 <center>为SecondActivity中隐式Intent跳转的Button添加事件监听</center>
-
-![](./res/在清单文件中为ThirdActivity添加action与category属性.png)
 
 <center>在清单文件中为ThirdActivity添加action与category属性</center>
 
@@ -76,11 +63,9 @@ Activity 跳转功能实现
    - 在`MainActivity`中添加 “启动带结果的跳转” 按钮和用于显示结果的`TextView`。
    - 在`ThirdActivity`中添加`EditText`（用于输入数据）和 “返回结果” 按钮。
 
-![](./res/在MainActivity中添加带结果跳转的Button与显示结果的EditText.png)
 
 <center>在MainActivity中添加带结果跳转的Button与显示结果的TextView</center>
 
-![](./res/在ThirdActivity中添加用于输入文本的EditText与返回结果的Button.png)
 
 <center>在ThirdActivity中添加用于输入文本的EditText与返回结果的Button</center>
 
@@ -90,23 +75,18 @@ Activity 跳转功能实现
 - `ThirdActivity`中为 “返回结果” 按钮设置点击事件，将`EditText`中的内容通过`Intent.putExtra()`存储，调用`setResult(Activity.RESULT_OK, intent)`设置返回结果后，通过`finish()`关闭页面。
 - 在`MainActivity`中重写`onActivityResult()`方法，根据请求码和结果码判断返回数据的有效性，获取数据并更新`TextView`。
 
-![](./res/MainActivity中通过startActivityForResult启动ThirdActivity并设置唯一请求码123.png)
 
 <center>MainActivity中通过startActivityForResult启动ThirdActivity,并设置唯一请求码123</center>
 
-![](./res/ThirdActivity向MainActivity返回结果.png)
 
 <center>ThirdActivity向MainActivity返回结果</center>
 
-![](./res/MainActivity中重写onActivityResult方法，并设置文本内容.png)
 
 <center>MainActivity中重写onActivityResult方法，并设置文本内容</center>
 
 ### 4.4 加分项功能实现
 
 1. 长按事件处理：在`MainActivity`中为 “启动带结果的跳转” 按钮添加长按监听器，长按后通过`Toast`提示 “长按启动了带返回结果的跳转！”。
-
-![](./res/设置长按监听时间.png)
 
 <center>设置长按监听时间</center>
 
@@ -116,20 +96,38 @@ Activity 跳转功能实现
 - 点击该按钮时，调用`setResult(Activity.RESULT_CANCELED)`并`finish()`。
 - 在`MainActivity`的`onActivityResult()`中处理取消逻辑（如提示 “操作已取消”）。
 
-![](./res/ThirdActivity设置取消返回Button.png)
 
 <center>ThirdActivity为取消返回Button设置监听事件</center>
 
-![](./res/MainActivity中处理取消返回的逻辑代码.png)
 
 <center>MainActivity中处理取消返回的逻辑代码</center>
 
 ## 五、附录
 
-- 效果展示
+<img width="1716" height="811" alt="5d79147409108b452c75d7190a492671" src="https://github.com/user-attachments/assets/ad7ad497-c615-4ae0-8cc1-02b92e3cf29e" />
 
-![](./res/first_assignment.gif)
+<img width="1821" height="833" alt="c6ba6a71de22b5f9eb766b9713cf6f89" src="https://github.com/user-attachments/assets/f0def58a-48a8-43b8-8931-703bb4c6d476" />
 
-- 长按效果以及取消返回效果
+<img width="1873" height="917" alt="1388b2552ca8c9e95eb79b1f9ea7e666" src="https://github.com/user-attachments/assets/d085aad2-bcea-49ed-b5fa-9b84290922a7" />
 
-![](./res/Bonus points.gif)
+<img width="1852" height="891" alt="1d80b0c82d121e108efc2abbde612d61" src="https://github.com/user-attachments/assets/068a1de7-3ccc-4920-8a86-510c30546ae2" />
+
+<img width="1818" height="694" alt="1065083c316596729378bf76ec633c69" src="https://github.com/user-attachments/assets/390871bc-2bda-4b38-900f-474f334875a2" />
+
+<img width="1918" height="734" alt="bb42b97129ce9fcbb667da9b9c549c1e" src="https://github.com/user-attachments/assets/51c785ed-ac27-455c-b0d0-74b471746a5e" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
