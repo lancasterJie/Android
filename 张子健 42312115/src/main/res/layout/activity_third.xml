@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".ThirdActivity">
+    <EditText
+        android:id="@+id/insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        />
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回结果"
+        android:textSize="20sp"/>
+    <Button
+        android:id="@+id/cancel_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回取消" />
+
+
+
+</LinearLayout>
