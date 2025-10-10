@@ -20,9 +20,7 @@ Activity 跳转功能实现
 ## 三、实验环境
 
 1. 开发工具：Android Studio
-2. 运行环境：
-   - 真机：Vivo V2284A API 35 
-3. 开发语言：Java
+2. 开发语言：Java
 
 ## 四、实验内容与实现说明
 
