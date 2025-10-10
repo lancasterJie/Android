@@ -6,7 +6,7 @@
 
 **姓名：*吴秋寒
 
-学号：\_\_\_\_\_\_\_\_\_\_
+学号：42312260
 
 ## 一、实验目的
 
@@ -22,17 +22,15 @@
 
 
 
-| 环境项            | 具体配置                    |
-| -------------- | ----------------------- |
-| 开发工具           | Android Studio Hedgehog |
-| Android SDK 版本 | API 34（Android 14）      |
-| 运行设备           | 模拟器（Pixel 8）/ 真机        |
-| 开发语言           | Java + XML              |
-| 日志筛选标签         | Lifecycle（自定义标签）        |
+| 环境项           | 具体配置                |
+| ---------------- | ----------------------- |
+| 开发工具         | Android Studio          |
+| Android SDK 版本 | API 36.0（Android 14）  |
+| 运行设备         | 模拟器（Pixel 8）/ 真机 |
+| 开发语言         | Java + XML              |
+| 日志筛选标签     | xiaowu（自定义标签）    |
 
 ## 三、实验内容与步骤
-
-这部分就不用贴图了，好呢吱吱
 
 ### （一）第一部分：创建 3 个 Activity（含生命周期 Log）
 
@@ -71,229 +69,119 @@
         </activity>
     </application>
 
-</manifest>
+</manifest
 ```
-
-![](截图1：AndroidManifest.xml配置界面，标注DialogActivity的theme设置)
-
-这样的都删了
 
 #### 步骤 2：创建 MainActivity（含跳转按钮 + 生命周期 Log）
 
 ##### （1）MainActivity 布局（activity\_main.xml）
 
-功能：显示 “MainActivity” 标识，添加 “跳转到 SecondActivity”“跳转到 DialogActivity” 按钮。
 
-好
-
-代码重新贴一下好
-
-代码类型写一下
 
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
 
-\<LinearLayout&#x20;
+    <!-- 跳转到普通SecondActivity的按钮 -->
+    <Button
+        android:id="@+id/to_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到SecondActivity" />
 
-&#x20;   xmlns:android="http://schemas.android.com/apk/res/android"
+    <!-- 跳转到对话框Activity的按钮 -->
+    <Button
+        android:id="@+id/to_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="跳转到DialogActivity" />
 
-&#x20;   android:layout\_width="match\_parent"
-
-&#x20;   android:layout\_height="match\_parent"
-
-&#x20;   android:orientation="vertical"
-
-&#x20;   android:gravity="center"
-
-&#x20;   android:padding="16dp">
-
-&#x20;   \<TextView
-
-&#x20;       android:layout\_width="wrap\_content"
-
-&#x20;       android:layout\_height="wrap\_content"
-
-&#x20;       android:text="MainActivity"
-
-&#x20;       android:textSize="24sp"
-
-&#x20;       android:layout\_marginBottom="40dp" />
-
-&#x20;   \<!-- 跳转到普通SecondActivity -->
-
-&#x20;   \<Button
-
-&#x20;       android:id="@+id/btn\_to\_second"
-
-&#x20;       android:layout\_width="wrap\_content"
-
-&#x20;       android:layout\_height="wrap\_content"
-
-&#x20;       android:text="跳转到SecondActivity"
-
-&#x20;       android:layout\_marginBottom="20dp" />
-
-&#x20;   \<!-- 跳转到对话框DialogActivity -->
-
-&#x20;   \<Button
-
-&#x20;       android:id="@+id/btn\_to\_dialog"
-
-&#x20;       android:layout\_width="wrap\_content"
-
-&#x20;       android:layout\_height="wrap\_content"
-
-&#x20;       android:text="跳转到DialogActivity" />
-
-\</LinearLayout>
+</LinearLayout>
 ```
 
-好
-
-![img](截图2：MainActivity布局设计界面)
+![](./picture-set/main界面.png)
 
 ##### （2）MainActivity 代码（重写生命周期 + 跳转逻辑）
 
 
 
 ```java
-package com.example.lifecyclelab;
+package com.example.assignment_2;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-
 import android.os.Bundle;
-
 import android.util.Log;
-
 import android.view.View;
-
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-&#x20;   // 日志标签（统一为"Lifecycle"，便于筛选）
+    // 日志标签，用于过滤Logcat
+    private static final String TAG = "xiaowu";
 
-&#x20;   private static final String TAG = "Lifecycle";
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Log.d(TAG, "MainActivity - onCreate");
+        Button b1 = findViewById(R.id.to_second);
+        Button b2 = findViewById(R.id.to_dialog);
 
-&#x20;   private Button btnToSecond, btnToDialog;
-
-&#x20;   @Override
-
-&#x20;   protected void onCreate(Bundle savedInstanceState) {
-
-&#x20;       super.onCreate(savedInstanceState);
-
-&#x20;       setContentView(R.layout.activity\_main);
-
-&#x20;       Log.d(TAG, "MainActivity - onCreate"); // 生命周期Log
-
-&#x20;       // 绑定按钮并设置跳转
-
-&#x20;       btnToSecond = findViewById(R.id.btn\_to\_second);
-
-&#x20;       btnToDialog = findViewById(R.id.btn\_to\_dialog);
-
-&#x20;       // 跳转到SecondActivity
-
-&#x20;       btnToSecond.setOnClickListener(v -> {
-
-&#x20;           startActivity(new Intent(MainActivity.this, SecondActivity.class));
-
-&#x20;       });
-
-&#x20;       // 跳转到DialogActivity
-
-&#x20;       btnToDialog.setOnClickListener(v -> {
-
-&#x20;           startActivity(new Intent(MainActivity.this, DialogActivity.class));
-
-&#x20;       });
-
-&#x20;   }
-
-&#x20;   // 生命周期方法：Activity可见（未交互）
-
-&#x20;   @Override
-
-&#x20;   protected void onStart() {
-
-&#x20;       super.onStart();
-
-&#x20;       Log.d(TAG, "MainActivity - onStart");
-
-&#x20;   }
-
-&#x20;   // 生命周期方法：Activity可见且可交互
-
-&#x20;   @Override
-
-&#x20;   protected void onResume() {
-
-&#x20;       super.onResume();
-
-&#x20;       Log.d(TAG, "MainActivity - onResume");
-
-&#x20;   }
-
-&#x20;   // 生命周期方法：Activity失去焦点（仍可能可见）
-
-&#x20;   @Override
-
-&#x20;   protected void onPause() {
-
-&#x20;       super.onPause();
-
-&#x20;       Log.d(TAG, "MainActivity - onPause");
-
-&#x20;   }
-
-&#x20;   // 生命周期方法：Activity完全不可见
-
-&#x20;   @Override
-
-&#x20;   protected void onStop() {
-
-&#x20;       super.onStop();
-
-&#x20;       Log.d(TAG, "MainActivity - onStop");
-
-&#x20;   }
-
-&#x20;   // 生命周期方法：Activity从停止状态恢复
-
-&#x20;   @Override
-
-&#x20;   protected void onRestart() {
-
-&#x20;       super.onRestart();
-
-&#x20;       Log.d(TAG, "MainActivity - onRestart");
-    &#x20; 你得删删
-
-&#x20;   }
-
-&#x20;   // 生命周期方法：Activity销毁
-
-&#x20;   @Override
-
-&#x20;   protected void onDestroy() {
-
-&#x20;       super.onDestroy();
-
-&#x20;       Log.d(TAG, "MainActivity - onDestroy");
-
-&#x20;   }
-
+        // 跳转到SecondActivity
+        b1.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+            startActivity(intent);
+        });
+        // 跳转到DialogActivity
+        b2.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, DialogActivity.class);
+            startActivity(intent);
+        });
+    }
+    // Activity可见但未交互时调用（启动过程）
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG, "MainActivity - onStart");
+    }
+    // Activity可见且可交互时调用（获取焦点）
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "MainActivity - onResume");
+    }
+    // 其他Activity覆盖当前Activity时调用（失去焦点但可见）
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "MainActivity - onPause");
+    }
+    // 其他Activity完全覆盖当前Activity时调用（不可见）
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "MainActivity - onStop");
+    }
+    // Activity从停止状态重新启动时调用（如返回当前Activity）
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(TAG, "MainActivity - onRestart");
+    }
+    // Activity销毁时调用（如finish()或系统回收）
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "MainActivity - onDestroy");
+    }
 }
 ```
-
-
-
-![img](截图3：MainActivity代码界面，标注生命周期方法与Log)
-
-这些截图就没必要了，因为你把源代码haodoteshangqulhaoha
 
 #### 步骤 3：创建普通 SecondActivity（同生命周期 Log）
 
@@ -302,160 +190,123 @@ public class MainActivity extends AppCompatActivity {
 
 
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
 
-\<LinearLayout&#x20;
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="这是SecondActivity"
+        android:textSize="18sp" />
 
-&#x20;   xmlns:android="http://schemas.android.com/apk/res/android"
+    <!-- 返回按钮 -->
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="返回MainActivity" />
 
-&#x20;   android:layout\_width="match\_parent"
-
-&#x20;   android:layout\_height="match\_parent"
-
-&#x20;   android:orientation="vertical"
-
-&#x20;   android:gravity="center"
-
-&#x20;   android:padding="16dp">
-
-&#x20;   \<TextView
-
-&#x20;       android:layout\_width="wrap\_content"
-
-&#x20;       android:layout\_height="wrap\_content"
-
-&#x20;       android:text="SecondActivity"
-
-&#x20;       android:textSize="24sp"
-
-&#x20;       android:layout\_marginBottom="40dp" />
-
-&#x20;   \<!-- 返回MainActivity按钮 -->
-
-&#x20;   \<Button
-
-&#x20;       android:id="@+id/btn\_back\_main"
-
-&#x20;       android:layout\_width="wrap\_content"
-
-&#x20;       android:layout\_height="wrap\_content"
-
-&#x20;       android:text="返回MainActivity" />
-
-\</LinearLayout>
+</LinearLayout>
 ```
 
 
 
-![img](截图4：SecondActivity布局设计界面)
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="这是SecondActivity"
+        android:textSize="18sp" />
+
+    <!-- 返回按钮 -->
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="返回MainActivity" />
+
+</LinearLayout>
+```
+
+![](./picture-set/second界面.png)
 
 ##### （2）SecondActivity 代码（重写生命周期 + 返回逻辑）
 
 
 
 ```java
-package com.example.lifecyclelab;
+package com.example.assignment_2;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-
 import android.util.Log;
-
 import android.view.View;
-
 import android.widget.Button;
 
 public class SecondActivity extends AppCompatActivity {
 
-&#x20;   private static final String TAG = "Lifecycle";
+    private static final String TAG = "xiaowu";
 
-&#x20;   private Button btnBackMain;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_second);
+        Log.d(TAG, "SecondActivity - onCreate");
 
-&#x20;   @Override
+        // 返回按钮逻辑：关闭当前Activity
+        Button backBtn = findViewById(R.id.back);
+        backBtn.setOnClickListener(v -> finish()); // 调用finish()销毁当前Activity
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG, "SecondActivity - onStart");
+    }
 
-&#x20;   protected void onCreate(Bundle savedInstanceState) {
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "SecondActivity - onResume");
+    }
 
-&#x20;       super.onCreate(savedInstanceState);
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "SecondActivity - onPause");
+    }
 
-&#x20;       setContentView(R.layout.activity\_second);
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "SecondActivity - onStop");
+    }
 
-&#x20;       Log.d(TAG, "SecondActivity - onCreate");
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(TAG, "SecondActivity - onRestart");
+    }
 
-&#x20;       // 返回MainActivity（销毁当前Activity）
-
-&#x20;       btnBackMain = findViewById(R.id.btn\_back\_main);
-
-&#x20;       btnBackMain.setOnClickListener(v -> finish());
-
-&#x20;   }
-
-&#x20;   @Override
-
-&#x20;   protected void onStart() {
-
-&#x20;       super.onStart();
-
-&#x20;       Log.d(TAG, "SecondActivity - onStart");
-
-&#x20;   }
-
-&#x20;   @Override
-
-&#x20;   protected void onResume() {
-
-&#x20;       super.onResume();
-
-&#x20;       Log.d(TAG, "SecondActivity - onResume");
-
-&#x20;   }
-
-&#x20;   @Override
-
-&#x20;   protected void onPause() {
-
-&#x20;       super.onPause();
-
-&#x20;       Log.d(TAG, "SecondActivity - onPause");
-
-&#x20;   }
-
-&#x20;   @Override
-
-&#x20;   protected void onStop() {
-
-&#x20;       super.onStop();
-
-&#x20;       Log.d(TAG, "SecondActivity - onStop");
-
-&#x20;   }
-
-&#x20;   @Override
-
-&#x20;   protected void onRestart() {
-
-&#x20;       super.onRestart();
-
-&#x20;       Log.d(TAG, "SecondActivity - onRestart");
-
-&#x20;   }
-
-&#x20;   @Override
-
-&#x20;   protected void onDestroy() {
-
-&#x20;       super.onDestroy();
-
-&#x20;       Log.d(TAG, "SecondActivity - onDestroy");
-
-&#x20;   }
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "SecondActivity - onDestroy");
+    }
 }
 ```
-
-
-
-![img](截图5：SecondActivity代码界面，标注返回逻辑与Log)
 
 #### 步骤 4：创建对话框样式 DialogActivity（同生命周期 Log）
 
@@ -463,183 +314,107 @@ public class SecondActivity extends AppCompatActivity {
 
 
 
-```
-\<?xml version="1.0" encoding="utf-8"?>
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
 
-\<LinearLayout&#x20;
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="这是DialogActivity"
+        android:textSize="18sp" />
+    
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="关闭对话框" />
 
-&#x20;   xmlns:android="http://schemas.android.com/apk/res/android"
-
-&#x20;   android:layout\_width="wrap\_content"
-
-&#x20;   android:layout\_height="wrap\_content"
-
-&#x20;   android:orientation="vertical"
-
-&#x20;   android:gravity="center"
-
-&#x20;   android:padding="16dp">
-
-&#x20;   \<TextView
-
-&#x20;       android:layout\_width="wrap\_content"
-
-&#x20;       android:layout\_height="wrap\_content"
-
-&#x20;       android:text="DialogActivity"
-
-&#x20;       android:textSize="24sp"
-
-&#x20;       android:layout\_marginBottom="20dp" />
-
-&#x20;   \<!-- 关闭对话框（返回MainActivity） -->
-
-&#x20;   \<Button
-
-&#x20;       android:id="@+id/btn\_close\_dialog"
-
-&#x20;       android:layout\_width="wrap\_content"
-
-&#x20;       android:layout\_height="wrap\_content"
-
-&#x20;       android:text="关闭对话框" />
-
-\</LinearLayout>
+</LinearLayout>
 ```
 
-
-
-![img](截图6：DialogActivity布局设计界面，显示对话框样式)
+![](./picture-set/Diglog界面.png)
 
 ##### （2）DialogActivity 代码（重写生命周期 + 关闭逻辑）
 
 
 
-```
-package com.example.lifecyclelab;
-
+```java
+package com.example.assignment_2;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-
 import android.util.Log;
-
 import android.view.View;
-
 import android.widget.Button;
 
 public class DialogActivity extends AppCompatActivity {
 
-&#x20;   private static final String TAG = "Lifecycle";
+    private static final String TAG = "小吴";
 
-&#x20;   private Button btnCloseDialog;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_dialog);
+        Log.d(TAG, "DialogActivity - onCreate");
 
-&#x20;   @Override
+        // 关闭对话框按钮逻辑
+        Button backBtn = findViewById(R.id.btn_back);
+        backBtn.setOnClickListener(v -> finish());
+    }
 
-&#x20;   protected void onCreate(Bundle savedInstanceState) {
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG, "DialogActivity - onStart");
+    }
 
-&#x20;       super.onCreate(savedInstanceState);
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "DialogActivity - onResume");
+    }
 
-&#x20;       setContentView(R.layout.activity\_dialog);
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "DialogActivity - onPause");
+    }
 
-&#x20;       Log.d(TAG, "DialogActivity - onCreate");
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "DialogActivity - onStop");
+    }
 
-&#x20;       // 关闭对话框（销毁当前Activity）
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(TAG, "DialogActivity - onRestart");
+    }
 
-&#x20;       btnCloseDialog = findViewById(R.id.btn\_close\_dialog);
-
-&#x20;       btnCloseDialog.setOnClickListener(v -> finish());
-
-&#x20;   }
-
-&#x20;   @Override
-
-&#x20;   protected void onStart() {
-
-&#x20;       super.onStart();
-
-&#x20;       Log.d(TAG, "DialogActivity - onStart");
-
-&#x20;   }
-
-&#x20;   @Override
-
-&#x20;   protected void onResume() {
-
-&#x20;       super.onResume();
-
-&#x20;       Log.d(TAG, "DialogActivity - onResume");
-
-&#x20;   }
-
-&#x20;   @Override
-
-&#x20;   protected void onPause() {
-
-&#x20;       super.onPause();
-
-&#x20;       Log.d(TAG, "DialogActivity - onPause");
-
-&#x20;   }
-
-&#x20;   @Override
-
-&#x20;   protected void onStop() {
-
-&#x20;       super.onStop();
-
-&#x20;       Log.d(TAG, "DialogActivity - onStop");
-
-&#x20;   }
-
-&#x20;   @Override
-
-&#x20;   protected void onRestart() {
-
-&#x20;       super.onRestart();
-
-&#x20;       Log.d(TAG, "DialogActivity - onRestart");
-
-&#x20;   }
-
-&#x20;   @Override
-
-&#x20;   protected void onDestroy() {
-
-&#x20;       super.onDestroy();
-
-&#x20;       Log.d(TAG, "DialogActivity - onDestroy");
-
-&#x20;   }
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "DialogActivity - onDestroy");
+    }
 }
 ```
 
 
 
-![img](截图7：DialogActivity代码界面，标注对话框特性与Log)
-
 ### （二）第二部分：生命周期观察与日志记录
-
-这部分就贴贴截图就行好
 
 #### 步骤 1：应用启动观察
 
-
-
-* **操作**：点击 Android Studio「运行」按钮，启动应用
-
-* **观察目标**：MainActivity 的生命周期调用顺序
-
-* **日志筛选**：在 Logcat 输入标签 “Lifecycle”，查看输出
-
-
-
-![img](截图8：应用启动时的Logcat日志界面，标注MainActivity的生命周期顺序)
-
-快捷键：CTRL+shift+i
-
-图片就放到目录 picture-set中，这样规范好
+应用启动时的Logcat日志界面，标注MainActivity的生命周期顺序)
 
 ![](./picture-set/应用启动时MainActivity的生命周期函数调用情况.png)
 
@@ -651,19 +426,14 @@ public class DialogActivity extends AppCompatActivity {
 
 * 观察：MainActivity 与 SecondActivity 的生命周期变化
 
+![](./picture-set/跳转到second.png)
 
-
-![img](截图9：Main跳转Second时的Logcat日志界面)
-
-
+Main跳转Second时的Logcat日志界面
 
 1. **从 Second→Main**：点击 SecondActivity 的 “返回 MainActivity” 按钮
 
 * 观察：SecondActivity 销毁、MainActivity 恢复的生命周期变化
-
-
-
-![img](截图10：Second返回Main时的Logcat日志界面)
+* ![](./picture-set/Second返回Main时的Logcat日志界面.png)
 
 #### 步骤 3：Dialog Activity 跳转观察
 
@@ -673,93 +443,24 @@ public class DialogActivity extends AppCompatActivity {
 
 * 观察：MainActivity 是否进入停止状态（对比普通跳转）
 
-
-
-![img](截图11：Main跳转Dialog时的Logcat日志界面)
-
-
+![](./picture-set/Main跳转Dialog时的Logcat日志界面.png)
 
 1. **从 Dialog→Main**：点击 DialogActivity 的 “关闭对话框” 按钮
 
 * 观察：DialogActivity 销毁、MainActivity 恢复的生命周期变化
+* ![](./picture-set/Dialog返回Main时的Logcat日志界面1.png)
 
-
-
-![img](截图12：Dialog返回Main时的Logcat日志界面)
+Dialog返回Main时的Logcat日志界面
 
 #### 步骤 4：数据记录与分析（填写下表）
 
 
 
-| 场景                    | MainActivity 生命周期顺序 | 目标 Activity 生命周期顺序 |
-| --------------------- | ------------------- | ------------------ |
-| 应用启动                  |                     | -（无目标 Activity）    |
-| Main → SecondActivity |                     |                    |
-| SecondActivity 返回     |                     |                    |
-| Main → DialogActivity |                     |                    |
-| DialogActivity 返回     |                     |                    |
-
-## 四、实验结果
-
-这个和 三 是不是重复了嗯呢 删掉的了好你来嘻嘻和好儿子 不管
-
-
-
-1. **应用启动结果**
-
-* 操作：启动应用进入 MainActivity
-
-* 日志结论：MainActivity 生命周期顺序为：`onCreate` → `onStart` → `onResume`
-
-
-
-![img](截图13：应用启动完整Log截图，标注顺序)
-
-
-
-1. **普通 Activity 跳转结果**
-
-* Main→Second：Main 执行`onPause` → `onStop`；Second 执行`onCreate` → `onStart` → `onResume`
-
-* Second→Main：Second 执行`onPause` → `onStop` → `onDestroy`；Main 执行`onRestart` → `onStart` → `onResume`
-
-
-
-![img](截图14：普通跳转完整Log截图，分步骤标注)
-
-
-
-1. **Dialog Activity 跳转结果**
-
-* Main→Dialog：Main 仅执行`onPause`（未执行`onStop`）；Dialog 执行`onCreate` → `onStart` → `onResume`
-
-* Dialog→Main：Dialog 执行`onPause` → `onStop` → `onDestroy`；Main 仅执行`onResume`（未执行`onRestart`）
-
-
-
-![img](截图15：Dialog跳转完整Log截图，分步骤标注)
-
-## 五、实验总结
-
-这部分也没太大必要嗯嗯aipa
-
-1. **核心生命周期规律**
-
-* 应用启动：Activity 从 “创建” 到 “可交互” 必走 `onCreate`→`onStart`→`onResume`
-
-* 完全遮挡（如普通跳转）：原 Activity 会走 `onPause`→`onStop`；恢复时走 `onRestart`→`onStart`→`onResume`
-
-* 部分遮挡（如 Dialog 跳转）：原 Activity 仅走 `onPause`（未完全不可见）；恢复时直接走 `onResume`
-
-1. **关键差异点**
-
-* 普通 Activity 与 Dialog Activity 的核心区别：是否完全遮挡原 Activity，导致原 Activity 是否执行`onStop`
-
-* 销毁 Activity（如`finish()`）：必走 `onPause`→`onStop`→`onDestroy`
-
-1. **常见问题与解决**
-
-* 问题：Logcat 筛选不到 “Lifecycle” 日志 → 解决：检查 Log 标签是否拼写一致，选择 “Debug” 日志级别
-
-* 问题：DialogActivity 未显示对话框样式 → 解决：确认 AndroidManifest 中已配置`android:theme="@style/Theme.AppCompat.Dialog"`
+| 场景                  | MainActivity 生命周期顺序                                    | 目标 Activity 生命周期顺序                                   |
+| --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 应用启动              | onCreate: FirstActivity<br/>onStart: FirstActivity<br/>onResume: FirstActivity | -（无目标 Activity）                                         |
+| Main → SecondActivity | onPause: FirstActivity<br/>onStop: FirstActivity             | onCreate: SecondActivity<br/>onStart: SecondActivity<br/>onResume: SecondActivity |
+| SecondActivity 返回   | onRestart: FirstActivity<br/>onStart: FirstActivity<br/>onResume: FirstActivity | onPause: SecondActivity<br/>onStop: SecondActivity<br/>onDestroy: SecondActivity |
+| Main → DialogActivity | onPause: FirstActivity                                       | onCreate: DialogActivity<br/>onStart: DialogActivity<br/>onResume: DialogActivity |
+| DialogActivity 返回   | onResume: FirstActivity                                      | onPause: DialogActivity<br/>onStop: DialogActivity<br/>onDestroy: DialogActivity |
 
