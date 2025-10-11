@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="match_parent"
+        android:textColor="@color/btn_danger"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_launcher_foreground"
+        android:hint="输入要返回的内容:"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_return_ok"
+        android:text="返回结果"
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_btn_secondary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/btn_text"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/btn_return_cancel"
+        android:text="返回取消"
+        android:background="@drawable/bg_btn_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/btn_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>
