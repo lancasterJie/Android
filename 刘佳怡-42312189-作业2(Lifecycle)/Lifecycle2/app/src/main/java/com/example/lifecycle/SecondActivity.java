@@ -11,7 +11,6 @@ import androidx.core.view.WindowInsetsCompat;
  * 普通Activity
  * 普通 Activity 跳转时，源 Activity 会进入 onStop 状态。
  * 返回按钮，调用 finish() 返回上一个 Activity。
- * 所有生命周期方法均输出日志
  */
 public class SecondActivity extends AppCompatActivity {
 
