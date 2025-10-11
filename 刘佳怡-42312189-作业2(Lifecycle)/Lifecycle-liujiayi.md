@@ -14,19 +14,19 @@
 1. **创建主 Activity**
    - 创建 MainActivity，重写所有生命周期方法。
    - 在每个生命周期方法中添加 Log 输出，格式：`Log.d("Lifecycle", "MainActivity - 方法名")`
-   
+    ![main](images/main.png)
 2. **创建普通 SecondActivity**
    - 创建第二个普通 Activity。
    - 同样重写所有生命周期方法并添加 Log 输出。
-   
+    ![second](images/second.png)
 3. **创建 Dialog Activity**
    - 创建第三个 Activity，设置为主题为对话框样式（Theme.AppCompat.Dialog）。
    - 重写所有生命周期方法并添加 Log 输出。
-
+    ![dialog](images/dialog.png)
 ## 实验步骤
 
 ### 第一部分：基础生命周期观察
-
+    ![all](images/all.png)
 1. **应用启动**
    - 启动应用，观察 MainActivity 的生命周期调用顺序。
    - 记录 Logcat 中的输出。
@@ -84,4 +84,5 @@
 
  日期：2025年10月11日  
  课程：Android 开发基础实验  
+
  作者：刘佳怡
