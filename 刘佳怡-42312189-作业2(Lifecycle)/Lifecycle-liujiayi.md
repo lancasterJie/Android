@@ -60,7 +60,7 @@
 | SecondActivity 返回（按返回键回到 Main） | onRestart() → onStart() → onResume() | onPause() → onStop() → onDestroy() |
 | Main → Dialog Activity（跳转到对话框式 Activity） | onPause()（不会调用 onStop()） | onCreate() → onStart() → onResume() |
 | DialogActivity 返回（关闭对话框） | onResume()（直接恢复，无 onRestart） | onPause() → onStop() → onDestroy() |
-
+![all](images/all.png)
 ### 核心结论与分析
 
 #### 全屏 Activity vs 对话框 Activity 的区别
@@ -89,5 +89,6 @@
  课程：Android 开发基础实验  
 
  作者：刘佳怡
+
 
 
