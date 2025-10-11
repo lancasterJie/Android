@@ -38,27 +38,27 @@ Navigator\"** 的Android应用。该应用包含三个核心Activity：
 1. #### 创建 MainActivity 布局
 
 在activity_main.xml文件中添加 "跳转到 SecondActivity"按钮。
-![alt text](photo\image.png)
+![alt text](photo/image.png)
 
 2. #### 添加MainActivity.java 代码
 
 为 "跳转到 SecondActivity" 按钮设置点击事件监听器，通过显式 Intent 启动
 SecondActivity。
-![alt text](photo\image-1.png)
-![alt text](photo\image-2.png)
+![alt text](photo/image-1.png)
+![alt text](photo/image-2.png)
 
 
 3. #### 创建 SecondActivity 布局
 
 添加 "返回到主页" 按钮和 "隐式跳转" 按钮。
 
-![alt text](photo\image-3.png)
+![alt text](photo/image-3.png)
 
 4. #### 添加SecondActivity.java 代码
 
 为 "返回到主页" 按钮设置点击事件，通过 finish() 结束当前 Activity
 并返回到MainActivity。
-![alt text](photo\image-24.png)
+![alt text](photo/image-24.png)
 
 
 
@@ -70,8 +70,8 @@ SecondActivity。
 
     在点击事件中，创建一个隐式Intent。Action: 自定义一个字符串常量\"com.example.action.VIEW_THIRD_ACTIVITY\"；Category: Intent.CATEGORY_DEFAULT。
 
-    ![alt text](photo\image-5.png)
-    ![alt text](photo\image-25.png)
+    ![alt text](photo/image-5.png)
+    ![alt text](photo/image-25.png)
     
 
 2. #### 配置 AndroidManifest.xml
@@ -79,7 +79,7 @@ SecondActivity。
 为 ThirdActivity 添加 \<intent-filter\>，声明其可响应自定义 Action
 和默认 Category。
 
-![alt text](photo\image-6.png)
+![alt text](photo/image-6.png)
 
 ### （三）带返回结果的跳转（MainActivity和ThirdActivity之间）
 
@@ -89,21 +89,21 @@ SecondActivity。
 
 （注：MainActivity.java中在第一部分已经展示过给该按钮设置了监听器）
 
-![alt text](photo\image-7.png)
+![alt text](photo/image-7.png)
 
 2.  #### 添加MainActivity.java代码
 
     在点击事件中，使用 startActivityForResult() 方法启动 ThirdActivity。为这个跳转设置一个唯一的请求码（requestCode
     101）
 
-   ![alt text](photo\image-8.png)
+   ![alt text](photo/image-8.png)
 
 3. #### 创建 ThirdActivity 布局
 
 添加 EditText（输入返回内容）、"返回结果" 按钮、"返回取消"
 按钮（加分项）。
 
-![alt text](photo\image-9.png)
+![alt text](photo/image-9.png)
 
 4. #### 添加ThirdActivity 代码
 
@@ -112,7 +112,7 @@ MainActivity。
 
 （1）在 ThirdActivity 的代码中，为"返回结果"按钮设置点击事件。
 
-![alt text](photo\image-10.png)
+![alt text](photo/image-10.png)
 
 （2）在点击事件中，创建一个新的 Intent 对象，并将 EditText 中的文本作为额外数据（Extra）放入Intent中。
 
@@ -121,7 +121,7 @@ data) 方法设置返回结果。resultCode 设置为 Activity.RESULT_OK。
 
 （4）调用 finish() 方法结束 ThirdActivity。
 
-![alt text](photo\image-11.png)
+![alt text](photo/image-11.png)
 
 **5.添加 MainActivity.java代码**
 
@@ -129,7 +129,7 @@ data) 方法设置返回结果。resultCode 设置为 Activity.RESULT_OK。
 data) 方法。在 onActivityResult 方法中，根据 requestCode 和 resultCode 判断是否为预期的返回结果。如果是，从 data Intent
 中获取返回的文本数据，并更新 MainActivity 的 TextView。
 
-![alt text](photo\image-12.png)
+![alt text](photo/image-12.png)
 
 ### （四）加分项
 
@@ -137,45 +137,45 @@ data) 方法。在 onActivityResult 方法中，根据 requestCode 和 res
 
 2.长按按钮时，弹出一个 Toast 提示用户"长按启动了带返回结果的跳转！"。
 
-![alt text](photo\image-13.png)
+![alt text](photo/image-13.png)
 
 4.在 ThirdActivity 中，添加一个名为 \"返回取消\" 的按钮。点击后使用setResult(Activity.RESULT_CANCELED)并finish()在 MainActivity 的 onActivityResult 中处理这个取消操作。
 
-![alt text](photo\image-14.png)
+![alt text](photo/image-14.png)
 
-![alt text](photo\image-15.png)
+![alt text](photo/image-15.png)
 
-![alt text](photo\image-16.png)
+![alt text](photo/image-16.png)
 
 **运行结果：**
 
 1.  **显示跳转功能**
 
-   ![alt text](photo\image-17.png)   ![alt text](photo\image-18.png)
+   ![alt text](photo/image-17.png)   ![alt text](photo/image-18.png)
 
     MainActivity界面和跳转到SecondActivity之后的界面
 
 2.  **隐式跳转功能**
 
-   ![alt text](photo\image-19.png)
+   ![alt text](photo/image-19.png)
 
     从SecondActivity界面隐式跳转到ThirdActivity之后的界面
 
 3.  **带返回结果的跳转**
 
-    ![alt text](photo\image-20.png)
-    !![alt text](photo\image-21.png)
+    ![alt text](photo/image-20.png)
+    !![alt text](photo/image-21.png)
 
     ThirdActivity的界面，输入HelloWorld!点击返回结果按钮    的截图和MainActivity界面中显示收到了结果的截图
 
-    ![alt text](photo\image-22.png)
+    ![alt text](photo/image-22.png)
 
 ThirdActivity 点击 "返回取消" 按钮，MainActivity 的 TextView 显示
 "操作已取消"
 
 4.  **长按功能（加分项）**
 
-![alt text](photo\image-23.png)
+![alt text](photo/image-23.png)
 
 长按 MainActivity 的 "启动带结果的跳转" 按钮，弹出 Toast 提示
 "长按启动了带返回结果的跳转！"
