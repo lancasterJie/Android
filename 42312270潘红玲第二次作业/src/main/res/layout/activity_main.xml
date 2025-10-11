@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MainActivity"
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <Button
+        android:id="@+id/JumpButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转到SecondActivity"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动带结果的跳转"
+        android:id="@+id/JumpButton2"
+        />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/tv_result"
+        android:text="返回结果在此显示"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开对话框样式的活动"
+        android:id="@+id/DialogButton"
+        />
+
+</LinearLayout>
