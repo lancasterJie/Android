@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btn_explicit_to_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到 SecondActivity (显式)"/>
+
+    <Button
+        android:id="@+id/btn_start_for_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="启动带结果的跳转到 ThirdActivity"/>
+
+    <TextView
+        android:id="@+id/tv_result_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="返回结果将显示在这里..."
+        android:textSize="16sp"/>
+
+</LinearLayout>
