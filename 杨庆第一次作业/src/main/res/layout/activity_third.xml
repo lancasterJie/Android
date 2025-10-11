@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ThirdActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Third Activity"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- 输入框 -->
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入要返回的内容"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 返回结果按钮 -->
+    <Button
+        android:id="@+id/btn_return_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="返回结果"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 返回取消按钮（加分项） -->
+    <Button
+        android:id="@+id/btn_return_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="返回取消"/>
+
+</LinearLayout>
