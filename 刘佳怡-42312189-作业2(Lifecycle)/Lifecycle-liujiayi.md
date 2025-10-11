@@ -31,7 +31,7 @@
    - 启动应用，观察 MainActivity 的生命周期调用顺序。
    - 记录 Logcat 中的输出。
    
-   ![启动应用](images/start.png)
+     ![启动应用](images/start.png)
 2. **普通 Activity 跳转（Main → SecondActivity）**
    - 从 MainActivity 跳转到 SecondActivity。
    - 观察两个 Activity 的生命周期变化。
@@ -67,20 +67,18 @@
 | 全屏 Activity（如 SecondActivity） | 是  | 是  | 是  |
 | 对话框 Activity（如 DialogActivity） | 否 （主界面仍部分可见） | 否  | 否  |
 
-#### 关键机制说明：
+### 分析：
 
 - 只有当 Activity 执行过 onStop() 后再次回到前台，才会调用 onRestart()。
-- 因此，从 DialogActivity 返回时，MainActivity 不会调用 onRestart()，而是直接调用 onResume()。
+- 从 DialogActivity 返回时，MainActivity 不会调用 onRestart()，而是直接调用 onResume()。
 
-#### 生命周期执行顺序逻辑分析对比
+#### 生命周期执行顺序
 
 - 系统总是先暂停当前 Activity（调用 onPause()）
 - 再启动新 Activity（依次调用 onCreate() → onStart() → onResume()）
 - 新 Activity 完全显示后，旧 Activity 才会进入 onStop()
 - onStop() 的调用时机晚于新 Activity 的 onResume()。
 - `onDestroy()` 只有在 Activity 被销毁时才会调用（如按返回键或调用 finish()）
-- 若设备内存不足，系统可能在 onStop() 后回收 Activity，下次启动时会重新创建（调用 onCreate() 而非 onRestart())
-
 
 ---
 
