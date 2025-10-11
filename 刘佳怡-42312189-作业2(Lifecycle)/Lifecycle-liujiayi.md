@@ -18,10 +18,12 @@
 2. **创建普通 SecondActivity**
    - 创建第二个普通 Activity。
    - 同样重写所有生命周期方法并添加 Log 输出。
+     
     ![second](images/second.png)
 3. **创建 Dialog Activity**
    - 创建第三个 Activity，设置为主题为对话框样式（Theme.AppCompat.Dialog）。
    - 重写所有生命周期方法并添加 Log 输出。
+     
     ![dialog](images/dialog.png)
 ## 实验步骤
 
@@ -86,3 +88,4 @@
  课程：Android 开发基础实验  
 
  作者：刘佳怡
+
