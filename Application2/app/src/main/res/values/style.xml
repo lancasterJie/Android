@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- 应用默认主题 -->
+<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+</style>
+
+<!-- 自定义对话框主题 -->
+<style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+    <!-- 隐藏标题栏 -->
+    <item name="windowNoTitle">true</item>
+    <!-- 设置窗口背景为透明，常用于实现圆角等自定义效果 -->
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <!-- 允许背景模糊（显示遮罩） -->
+    <item name="android:backgroundDimEnabled">true</item>
+</style>
+</resources>
