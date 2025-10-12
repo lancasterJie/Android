@@ -4,7 +4,65 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df8afabc-04ec-4367-8510-f40b51d903e7" name="Changes" comment="" />
+    <list default="true" id="df8afabc-04ec-4367-8510-f40b51d903e7" name="Changes" comment="安卓开发第一次作业提交">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/.idea/AndroidProjectSystem.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/.idea/deploymentTargetSelector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/.idea/migrations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/androidTest/java/com/fennuoyiman/homework001/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/java/com/fennuoyiman/homework001/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/java/com/fennuoyiman/homework001/SecondActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/java/com/fennuoyiman/homework001/ThirdActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/layout/activity_second.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/layout/activity_third.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/mipmap-anydpi/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/app/src/test/java/com/fennuoyiman/homework001/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/gradle/libs.versions.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Homework001/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/assets/2025-10-11-16-49-24-微信图片_2025-10-11_162705_925.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/assets/2025-10-11-16-49-46-微信图片_2025-10-11_162715_748.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/assets/2025-10-11-16-49-57-微信图片_2025-10-11_162721_920.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/assets/2025-10-11-16-50-01-微信图片_2025-10-11_162725_219.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/常庭豪42312128-homwork001/assets/2025-10-11-16-50-07-微信图片_2025-10-11_162728_728.png" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,28 +72,48 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;fennuoyiman&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/lancasterJie/Android.git&quot;,
+    &quot;accountId&quot;: &quot;01b65cde-e6a9-4c77-a6af-82aea7e7a7cb&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="33ufDANkx5SyAeX96XGVSZoGwSk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/fennuoyiman/AndroidStudioProjects/AndroidDevelopmentHomework"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;常庭豪42312128&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/fennuoyiman/AndroidStudioProjects/AndroidDevelopmentHomework&quot;
   }
-}]]></component>
+}</component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="df8afabc-04ec-4367-8510-f40b51d903e7" name="Changes" comment="" />
@@ -44,6 +122,19 @@
       <option name="presentableId" value="Default" />
       <updated>1760171756810</updated>
     </task>
+    <task id="LOCAL-00001" summary="安卓开发第一次作业提交">
+      <option name="closed" value="true" />
+      <created>1760172752239</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1760172752239</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="安卓开发第一次作业提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="安卓开发第一次作业提交" />
   </component>
 </project>
