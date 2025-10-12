@@ -204,3 +204,4 @@ public class DialogActivity extends AppCompatActivity {
 | SecondActivity 返回    | onRestart → onStart → onResume | onPause → onStop → onDestroy  |
 | Main → Dialog Activity | onPause                        | onCreate → onStart → onResume |
 | Dialog Activity 返回   | onResume                       | onPause → onStop → onDestroy  |
+![alt text](image.png)
