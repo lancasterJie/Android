@@ -1,8 +1,6 @@
 操作图如下：
 
-<img title="" src="file:///C:/Users/Koreyoshi/Desktop/2025-10-12-22-16-31-image.png" alt="" width="264">                 <img title="" src="file:///C:/Users/Koreyoshi/AppData/Roaming/marktext/images/2025-10-12-22-16-56-image.png" alt="" width="305">              <img title="" src="file:///C:/Users/Koreyoshi/AppData/Roaming/marktext/images/2025-10-12-22-17-40-image.png" alt="" width="306">
-
-
+<img title="" src="file:///C:/Users/Koreyoshi/Desktop/2025-10-12-22-16-31-image.png" alt="" width="264">                 <img title="" src="file:///C:/Users/Koreyoshi/Desktop/Screenshot%202025-10-12%20223606.png" alt="" width="305">              <img src="file:///C:/Users/Koreyoshi/Desktop/Screenshot%202025-10-12%20223656.png" title="" alt="" width="50">
 
 | 场景                    | MainActivity生命周期顺序           | 目标Activity生命周期顺序            |
 | --------------------- |:----------------------------:|:---------------------------:|
