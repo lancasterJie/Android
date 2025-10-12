@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ThirtyActivity">
+
+
+
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="请输入文本："
+      android:id="@+id/insert"
+      />
+
+  <LinearLayout
+      android:gravity="center"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/buttonReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="返回结果" />
+
+    <TextView
+        android:layout_width="90px"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/consule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回取消" />
+
+  </LinearLayout>
+
+  </LinearLayout>
