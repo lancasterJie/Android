@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+<!-- Base application theme. -->
+<style name="Base.Theme.FragmentDemo" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <item name="colorPrimary">@color/purple_500</item>
+    <item name="colorPrimaryVariant">@color/purple_700</item>
+    <item name="colorOnPrimary">@color/white</item>
+    <!-- Customize your theme here. -->
+</style>
+
+<style name="Theme.FragmentDemo" parent="Base.Theme.FragmentDemo" />
+
+<!-- RadioButton统一样式 -->
+<style name="RadioButtonStyle">
+    <item name="android:background">@drawable/radio_button_selector</item>
+    <item name="android:padding">12dp</item>
+    <item name="android:textColor">@drawable/radio_text_selector</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:button">@null</item>
+    <item name="android:gravity">center</item>
+</style>
+</resources>

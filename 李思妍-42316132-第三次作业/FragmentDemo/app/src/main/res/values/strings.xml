@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FragmentDemo</string>
+
+    <!-- 新增的字符串资源 -->
+    <string name="restored_data">恢复的数据: %s</string>
+    <string name="data_sent_please_switch">数据已发送！请切换到首页查看</string>
+    <string name="fragment_return">Fragment返回: %s</string>
+</resources>

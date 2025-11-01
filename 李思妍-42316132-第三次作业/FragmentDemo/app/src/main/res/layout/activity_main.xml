@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- RadioGroup 控制 Fragment 切换 -->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/radio_group_bg">
+
+        <RadioButton
+            android:id="@+id/radioHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/RadioButtonStyle"
+            android:text="首页"
+            android:gravity="center" />
+
+        <RadioButton
+            android:id="@+id/radioProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/RadioButtonStyle"
+            android:text="个人资料"
+            android:gravity="center" />
+
+        <RadioButton
+            android:id="@+id/radioSettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/RadioButtonStyle"
+            android:text="设置"
+            android:gravity="center" />
+
+        <RadioButton
+            android:id="@+id/radioData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/RadioButtonStyle"
+            android:text="数据传输"
+            android:gravity="center" />
+
+    </RadioGroup>
+
+    <!-- Fragment 容器 -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- 屏幕旋转测试区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#f5f5f5">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="屏幕旋转测试区域"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="在这里输入内容，然后旋转屏幕测试数据保存" />
+
+        <TextView
+            android:id="@+id/tvSavedData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="保存的数据将显示在这里"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
