@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#99000000"
+        >
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/back"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_insert"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/custom_radio_button"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/rb_export"
+            style="@style/custom_radio_button"
+            android:text="探索" />
+
+        <RadioButton
+            android:id="@+id/rb_message"
+            style="@style/custom_radio_button"
+            android:text="消息" />
+
+        <RadioButton
+            android:id="@+id/rb_person"
+            style="@style/custom_radio_button"
+            android:text="个人" />
+
+    </RadioGroup>
+
+</LinearLayout>
