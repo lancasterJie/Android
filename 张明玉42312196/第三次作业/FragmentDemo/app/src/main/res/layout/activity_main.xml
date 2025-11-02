@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main">
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:elevation="8dp">
+
+        <RadioButton
+            android:id="@+id/radio_first"
+            style="@style/RadioButtonStyle"
+            android:text="编辑"
+            android:checked="true" />
+-*
+        <RadioButton
+            android:id="@+id/radio_second"
+            style="@style/RadioButtonStyle"
+            android:text="展示" />
+
+        <RadioButton
+            android:id="@+id/radio_third"
+            style="@style/RadioButtonStyle"
+            android:text="第三页" />
+
+        <RadioButton
+            android:id="@+id/radio_forth"
+            style="@style/RadioButtonStyle"
+            android:text="第四页" />
+
+    </RadioGroup>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/detail_activity"
+        android:text="详情页"/>
+
+</LinearLayout>
