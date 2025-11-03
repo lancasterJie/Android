@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="场景A: Activity → Activity 数据传输"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 输入区域 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="姓名:"
+            android:textSize="14sp"/>
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入姓名"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="年龄:"
+            android:textSize="14sp"/>
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="请输入年龄"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="职业:"
+            android:textSize="14sp"/>
+        <EditText
+            android:id="@+id/etJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入职业"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 第四行输入框（传递给FragmentB） -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="传递给FragmentB的内容:"
+            android:textSize="14sp"/>
+        <EditText
+            android:id="@+id/etFourthInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入要传递给FragmentB的内容"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="保存并跳转到Detail"
+            android:background="#2196F3"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- FragmentB返回数据显示 -->
+        <TextView
+            android:id="@+id/tvReturnFromB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="从FragmentB返回的内容将显示在这里"
+            android:textSize="14sp"
+            android:background="#f0f0f0"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 屏幕旋转测试 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="屏幕旋转测试 - 输入内容:"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/etRotationTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入内容测试屏幕旋转保存"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvSavedContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="保存的内容将显示在这里:"
+            android:textSize="14sp"
+            android:background="#f0f0f0"
+            android:padding="12dp" />
+
+    </LinearLayout>
+</ScrollView>

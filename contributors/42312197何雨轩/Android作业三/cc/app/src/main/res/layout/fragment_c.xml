@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="场景C: FragmentC → FragmentD 数据传输"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/etInputC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入要传递给FragmentD的内容" />
+
+    <Button
+        android:id="@+id/btnSendToD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送到FragmentD"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="从FragmentD返回的内容:"
+        android:layout_marginTop="16dp" />
+    <TextView
+        android:id="@+id/tvReturnFromD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f0f0f0"
+        android:padding="8dp" />
+
+</LinearLayout>
