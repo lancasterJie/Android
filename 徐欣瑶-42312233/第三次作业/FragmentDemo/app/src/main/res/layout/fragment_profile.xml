@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="个人资料 Fragment"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvProfileData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="等待数据..."
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:background="#F0F0F0" />
+
+    <Button
+        android:id="@+id/btnSendResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送处理结果给Activity"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
