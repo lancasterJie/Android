@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fragment Test!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="24dp"
+        android:background="@color/purple_200" />
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@color/white">
+
+        <RadioButton
+            android:id="@+id/radiohome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CustomRadioButton"
+            android:text="首页" />
+        <RadioButton
+            android:id="@+id/radiomessge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CustomRadioButton"
+            android:text="消息" />
+        <RadioButton
+            android:id="@+id/radioself"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CustomRadioButton"
+            android:text="个人" />
+        <RadioButton
+            android:id="@+id/radiosetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CustomRadioButton"
+            android:text="设置" />
+    </RadioGroup>
+
+
+</LinearLayout>
