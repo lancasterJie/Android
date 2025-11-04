@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_goto_second"
+        android:text="跳转到 SecondActivity"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_btn_primary"
+        android:textColor="@color/btn_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingVertical="12dp"/>
+
+    <Button
+        android:id="@+id/btn_goto_for_result"
+        android:text="带结果的跳转"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_btn_secondary"
+        android:textColor="@color/btn_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:paddingVertical="12dp"/>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:text="返回结果："
+        android:textColor="@color/btn_danger"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

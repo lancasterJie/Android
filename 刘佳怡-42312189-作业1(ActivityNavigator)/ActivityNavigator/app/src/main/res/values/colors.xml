@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- 按钮背景 -->
+    <color name="btn_primary">#FF4285F4</color>      <!-- Google 蓝 -->
+    <color name="btn_secondary">#FF34A853</color>    <!-- Google 绿 -->
+    <color name="btn_danger">#FFEA4335</color>       <!-- Google 红 -->
+    <color name="btn_accent">#FFFBBC05</color>       <!-- Google 黄 -->
+
+    <!-- 按钮文字 -->
+    <color name="btn_text">#FFFFFFFF</color>
+</resources>
