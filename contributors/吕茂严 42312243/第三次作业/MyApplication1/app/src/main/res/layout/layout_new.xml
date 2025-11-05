@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"> <!-- 第一层：手机号行（水平排列） -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号"
+            android:textSize="16sp"
+            android:layout_marginEnd="8dp"/>
+        <EditText
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="请输入手机号" android:inputType="phone"/> </LinearLayout>
+    <!-- 第二层：验证码行（水平排列，包含 EditText 和 Button） -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="8dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="验证码" android:textSize="16sp" android:layout_marginEnd="8dp"/> <!-- 嵌套一个水平 LinearLayout 管理 EditText 和 Button -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="请输入验证码" android:inputType="number"/>
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="获取验证码" android:layout_marginStart="8dp"/> </LinearLayout>
+    </LinearLayout> <!-- 第三层：开始按钮 --> <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="开始" android:layout_marginTop="16dp"/> </LinearLayout>
