@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- RadioGroup 控制 Fragment 切换 -->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/radio_background"
+        android:padding="8dp">
+
+        <RadioButton
+            android:id="@+id/radioHome"
+            style="@style/CustomRadioButton"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/radioProfile"
+            style="@style/CustomRadioButton"
+            android:text="个人资料" />
+
+        <RadioButton
+            android:id="@+id/radioSettings"
+            style="@style/CustomRadioButton"
+            android:text="设置" />
+
+        <RadioButton
+            android:id="@+id/radioData"
+            style="@style/CustomRadioButton"
+            android:text="数据传输" />
+
+    </RadioGroup>
+
+    <!-- Fragment 容器 -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- 显示Fragment返回的结果 -->
+    <TextView
+        android:id="@+id/tvFragmentResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E8E8E8"
+        android:padding="16dp"
+        android:text="Fragment返回结果将显示在这里"
+        android:textSize="14sp" />
+
+</LinearLayout>

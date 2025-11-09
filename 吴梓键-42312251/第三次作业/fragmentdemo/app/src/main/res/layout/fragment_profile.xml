@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="个人资料 Fragment"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入用户名"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入年龄"
+        android:inputType="number"
+        android:layout_marginTop="8dp" />
+
+    <CheckBox
+        android:id="@+id/cbIsStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="是否学生"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnSendToActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送数据到Activity"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnGoToDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转到详情页"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
