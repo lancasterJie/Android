@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn_go_to_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到DetailActivity" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#F5F5F5">
+
+        <RadioButton
+            android:id="@+id/radio_fragment_a"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/RadioButtonStyle"
+            android:text="A" />
+
+        <RadioButton
+            android:id="@+id/radio_fragment_b"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/RadioButtonStyle"
+            android:text="B" />
+
+        <RadioButton
+            android:id="@+id/radio_fragment_c"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/RadioButtonStyle"
+            android:text="C" />
+
+        <RadioButton
+            android:id="@+id/radio_fragment_d"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/RadioButtonStyle"
+            android:text="D" />
+
+    </RadioGroup>
+
+</LinearLayout>
