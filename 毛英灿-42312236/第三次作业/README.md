@@ -120,27 +120,26 @@
     }
     
 ```
-![alt text](image-9.png){: style="display:block; margin:auto;width:300px;" }
-
+![alt text](image-9.png)
 **场景 B: Activity ↔ Fragment**
 MainActivity 向 Fragment 传递初始数据，Fragment 向 Activity 返回处理结果
 ![alt text](image-1.png)
 ![alt text](image-2.png)
-![alt text](image-5.png){: style="display:block; margin:auto;width:300px;" }
+![alt text](image-5.png)
 
 **场景 C: Fragment → Fragment**
 在两个 Fragment 之间通过 Activity 中转传递数据
 ![alt text](image-3.png)
-![alt text](image-7.png){: style="width:300px; display:inline-block; margin:0 8px;" } ![alt text](image-8.png){: style="width:300px; display:inline-block; margin:0 8px;" }
+![alt text](image-7.png)![alt text](image-8.png)
 
 
 ### 3. 屏幕旋转与状态保存 onSaveInstanceState
 **要求：**
 - log onSaveInstanceState的在生命周期的哪个阶段出现
-![alt text](image-11.png){: style="width:1000px;" }
+![alt text](image-11.png)
 可以看出：出现在Mainactivity的onStart之后，onResume之前
 - 在onSaveInstanceState中保存edittext中内容，并在屏幕旋转后实现在textview中进行展示
-![alt text](image-12.png){: style="display:block; margin:auto;width:300px;" }
+![alt text](image-12.png)
 ![alt text](image-13.png)
 实现的主要代码在Manifest.xml和FourthFragment.java
 给出部分代码
