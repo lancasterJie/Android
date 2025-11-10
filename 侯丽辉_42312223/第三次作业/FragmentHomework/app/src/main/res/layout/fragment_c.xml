@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:background="@color/fragmentC_bg">
+
+    <TextView
+        android:id="@+id/tv_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fragment C — 发送给 Fragment D"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/textPrimary"/>
+
+    <EditText
+        android:id="@+id/et_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入要发送给 D 的消息"
+        android:background="@drawable/radio_button_selector"
+        android:minHeight="48dp"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="12dp"
+        android:gravity="center_vertical"
+        android:textSize="16sp"  />
+
+    <Button
+        android:id="@+id/btn_to_d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送给 D（通过 Activity）"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

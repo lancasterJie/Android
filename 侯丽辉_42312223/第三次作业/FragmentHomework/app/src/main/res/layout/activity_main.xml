@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="@color/card"
+        android:elevation="4dp"
+        android:layout_margin="12dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="12dp"
+        android:clipToPadding="false">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Radio + Fragment Demo"
+            android:textSize="18sp"
+            android:textColor="@color/textPrimary"
+            android:layout_weight="1"/>
+
+        <Button
+            style="?attr/materialButtonStyle"
+            android:id="@+id/btn_to_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to_detail"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:layout_marginTop="72dp">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="12dp">
+
+            <RadioButton
+                android:id="@+id/rb_a"
+                style="@style/RadioBtnStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fragment A"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:paddingVertical="8dp"
+                android:gravity="center"/>
+
+            <RadioButton
+                android:id="@+id/rb_b"
+                style="@style/RadioBtnStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fragment B"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:paddingVertical="8dp"
+                android:gravity="center"/>
+
+            <RadioButton
+                android:id="@+id/rb_c"
+                style="@style/RadioBtnStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fragment C"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:paddingVertical="8dp"
+                android:gravity="center"/>
+
+            <RadioButton
+                android:id="@+id/rb_d"
+                style="@style/RadioBtnStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fragment D"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:paddingVertical="8dp"
+                android:gravity="center"/>
+        </RadioGroup>
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/card"
+            android:elevation="2dp"
+            android:padding="12dp"/>
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

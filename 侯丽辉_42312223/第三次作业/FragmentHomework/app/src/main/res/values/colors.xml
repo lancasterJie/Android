@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary">#1976D2</color>
+    <color name="primaryDark">#115293</color>
+    <color name="accent">#FFC107</color>
+    <color name="bg">#F6F9FC</color>
+    <color name="card">#FFFFFF</color>
+    <color name="textPrimary">#212121</color>
+    <color name="textSecondary">#666666</color>
+    <color name="fragmentA_bg">#E3F2FD</color>  <!-- 浅蓝 -->
+    <color name="fragmentB_bg">#FFF8E1</color>  <!-- 淡黄 -->
+    <color name="fragmentC_bg">#E8F5E9</color>  <!-- 浅绿 -->
+    <color name="fragmentD_bg">#F3E5F5</color>  <!-- 浅紫 -->
+
+</resources>

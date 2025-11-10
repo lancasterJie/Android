@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:background="@color/fragmentB_bg">
+
+    <TextView
+        android:id="@+id/tv_init"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fragment B — 接收 Activity 初始数据"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/textPrimary"/>
+
+    <Button
+        android:id="@+id/btn_send_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="向 Activity 返回处理结果"/>
+</LinearLayout>
