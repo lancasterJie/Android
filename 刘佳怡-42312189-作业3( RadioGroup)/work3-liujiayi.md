@@ -1,7 +1,7 @@
 # 作业3要求
  
 ## 1. RadioGroup 控制 Fragment 切换
-![radio_button_selector](images3/radio_button_selector.png)
+ ![radio_button_selector](images3/radio_button_selector.png)
 - 创建包含 4 个 `RadioButton` 的 `RadioGroup`
 - 每个 `RadioButton` 对应一个不同的 `Fragment`
 - 点击 `RadioButton` 时切换到对应的 `Fragment`
@@ -22,7 +22,7 @@
   - 用户名
   - 年龄
   - 是否学生等信息
-![Activity → Activity](images3/Activity → Activity.png)
+![Activity to Activity](images3/Activity to Activity.png)
 ### 场景 B: Activity ↔ Fragment
 
 - `MainActivity` 向 `Fragment` 传递初始数据
