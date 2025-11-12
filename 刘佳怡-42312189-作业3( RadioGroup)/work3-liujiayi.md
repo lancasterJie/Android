@@ -9,7 +9,8 @@
 - 在 `res/drawable/radio_button_selector.xml` 中定义背景选择器，用于定义 `RadioButton` 是否被选中（checked）的状态
 - 在 `style` 中统一定义 `RadioButton` 的样式
 ![radiobutton统一样式](images3/radiobutton统一样式.png)
-![Fragment01](images3/Fragment01.png)![Fragment02](images3/Fragment02.png)![Fragment03](images3/Fragment03.png)![Fragment04](images3/Fragment04.png)
+![Fragment01](images3/Fragment01.png) ![Fragment02](images3/Fragment02.png)
+![Fragment03](images3/Fragment03.png) ![Fragment04](images3/Fragment04.png)
 ## 2. Bundle 数据传输
 
 要求实现以下三种场景：
@@ -21,7 +22,7 @@
   - 用户名
   - 年龄
   - 是否学生等信息
-
+![Activity → Activity](images3/Activity → Activity.png)
 ### 场景 B: Activity ↔ Fragment
 
 - `MainActivity` 向 `Fragment` 传递初始数据
