@@ -38,3 +38,6 @@
 - 要求记录 `onSaveInstanceState` 在生命周期中的调用阶段（可通过 Log 输出观察）
 - 在 `onSaveInstanceState` 中保存 `EditText` 中的内容
 - 屏幕旋转后，在 `TextView` 中展示之前保存的内容
+![onSaveInstanceState01](images3/onSaveInstanceState01.png)
+![onSaveInstanceState02](images3/onSaveInstanceState02.png)
+![onSaveInstanceStateLog](images3/onSaveInstanceStateLog.png)
