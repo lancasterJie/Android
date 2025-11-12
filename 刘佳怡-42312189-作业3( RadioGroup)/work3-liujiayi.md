@@ -1,14 +1,15 @@
 # 作业3要求
- ![radio_button_selector](images3/radio_button_selector.png)
+ 
 ## 1. RadioGroup 控制 Fragment 切换
-
+![radio_button_selector](images3/radio_button_selector.png)
 - 创建包含 4 个 `RadioButton` 的 `RadioGroup`
 - 每个 `RadioButton` 对应一个不同的 `Fragment`
 - 点击 `RadioButton` 时切换到对应的 `Fragment`
 - 每个 `Fragment` 要有独特的 UI 和功能区分
 - 在 `res/drawable/radio_button_selector.xml` 中定义背景选择器，用于定义 `RadioButton` 是否被选中（checked）的状态
 - 在 `style` 中统一定义 `RadioButton` 的样式
-
+![radiobutton统一样式](images3/radiobutton统一样式.png)
+![Fragment01](images3/Fragment01.png)![Fragment02](images3/Fragment02.png)![Fragment03](images3/Fragment03.png)![Fragment04](images3/Fragment04.png)
 ## 2. Bundle 数据传输
 
 要求实现以下三种场景：
