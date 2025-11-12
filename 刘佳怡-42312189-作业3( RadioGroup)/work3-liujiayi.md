@@ -27,11 +27,12 @@
 
 - `MainActivity` 向 `Fragment` 传递初始数据
 - `Fragment` 向 `MainActivity` 返回处理结果
-
+![ActivitytoFragment](images3/ActivitytoFragment.png)
+![FragmenttoActivity](images3/FragmenttoActivity.png)
 ### 场景 C: Fragment → Fragment
 
 - 在两个 `Fragment` 之间通过 `Activity` 中转传递数据
-
+![FragmenttoFragment](images3/FragmenttoFragment.png)
 ## 3. 屏幕旋转与状态保存 (`onSaveInstanceState`)
 
 - 要求记录 `onSaveInstanceState` 在生命周期中的调用阶段（可通过 Log 输出观察）
