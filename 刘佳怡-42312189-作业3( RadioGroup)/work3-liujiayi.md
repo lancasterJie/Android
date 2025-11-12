@@ -1,5 +1,5 @@
 # 作业3要求
-
+ ![radio_button_selector](images3/radio_button_selector.png)
 ## 1. RadioGroup 控制 Fragment 切换
 
 - 创建包含 4 个 `RadioButton` 的 `RadioGroup`
