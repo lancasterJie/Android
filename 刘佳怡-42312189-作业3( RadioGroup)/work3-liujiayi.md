@@ -18,11 +18,11 @@
 ### 场景 A: Activity → Activity
 
 - 从 `MainActivity` 传递用户数据到 `DetailActivity`
+![ActivitytoActivity](images3/ActivitytoActivity.png)
 - 传递的数据包括：
   - 用户名
   - 年龄
   - 是否学生等信息
-![ActivitytoActivity](images3/ActivitytoActivity.png)
 ### 场景 B: Activity ↔ Fragment
 
 - `MainActivity` 向 `Fragment` 传递初始数据
