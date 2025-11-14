@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edit_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="输入文本（旋转前保存）"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/text_restored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="旋转后展示保存内容"
+        app:layout_constraintTop_toBottomOf="@id/edit_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btn_main_to_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Main→Detail 传递数据"
+        app:layout_constraintTop_toBottomOf="@id/text_restored"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_main_to_detail"
+        app:layout_constraintBottom_toTopOf="@+id/rg_nav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <RadioGroup
+        android:id="@+id/rg_nav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/Widget.App.RadioTab"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/rb_discover"
+            style="@style/Widget.App.RadioTab"
+            android:text="发现" />
+
+        <RadioButton
+            android:id="@+id/rb_notify"
+            style="@style/Widget.App.RadioTab"
+            android:text="通知" />
+
+        <RadioButton
+            android:id="@+id/rb_profile"
+            style="@style/Widget.App.RadioTab"
+            android:text="我的" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
