@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Notebook Lab</string>
+    <string name="default_user_name">Guest</string>
+    <string name="main_title_format">%1$s 的记事本</string>
+    <string name="label_welcome">记事本（文件 + 设置 + SQLite）</string>
+    <string name="hint_note">在此输入你的笔记内容，可多行。</string>
+    <string name="btn_save_file">保存到文件</string>
+    <string name="btn_load_file">从文件加载</string>
+    <string name="btn_save_record">保存为记录</string>
+    <string name="status_ready">状态：待操作</string>
+    <string name="status_saved">状态：已保存（%1$s）</string>
+    <string name="status_loaded">状态：已加载（%1$s）</string>
+    <string name="status_record_saved">状态：记录已保存（%1$s）</string>
+    <string name="msg_save_success">已保存到文件</string>
+    <string name="msg_save_error">保存失败，请重试</string>
+    <string name="msg_load_success">已从文件加载</string>
+    <string name="msg_file_not_found">未找到文件，请先保存</string>
+    <string name="msg_load_error">加载失败，请重试</string>
+    <string name="msg_empty_note">请输入内容后再保存</string>
+    <string name="msg_record_saved">记录已写入数据库</string>
+    <string name="msg_record_error">保存记录失败</string>
+    <string name="label_auto_save">自动保存（离开主界面时自动保存）</string>
+    <string name="hint_user_name">请输入昵称，例如“小明”</string>
+    <string name="btn_save_settings">保存设置</string>
+    <string name="label_no_records">暂无记录，先去主界面保存一条吧</string>
+    <string name="menu_settings">设置</string>
+    <string name="menu_records">记录列表</string>
+</resources>
