@@ -5,7 +5,7 @@
 通过本实验，学生需要掌握 Android 中三种常用本地数据存储方式：
 
 1. **文件（File）读写：** 使用 `FileInputStream` / `FileOutputStream` 或 `openFileInput` / `openFileOutput` 进行文本文件的保存与加载。
-2. **SharedPreferences：** 使用 `getSharedPreferences()` 保存和读取简单的键值对配置数据。
+2. **SharedPreferences：** 使用 `getSharedPreferences()` 保存和读取简单的键值对配置数据（实现账户，密码的自动保存和读取）。
 3. **SQLite 数据库：** 使用 `SQLiteOpenHelper` 管理数据库，完成基本的增删改查（CRUD）操作。
 
 ---
@@ -38,9 +38,9 @@
 ### 2. 设置模块（SharedPreferences：getSharedPreferences）
 
 - 在设置界面（可以是一个新的 `Activity`）中提供以下控件示例：
-  - 一个 `Switch`：是否开启“自动保存”
-  - 一个 `EditText`：用户昵称（例如显示在主界面标题）
-  - 一个 `Button`：保存设置
+  - 一个 `Checkbox`：是否开启“自动保存账户密码”
+  - 2个 `EditText`：用户昵称和密码（例如显示在主界面标题）
+  - 一个 `Button`：login跳转到其他页面
 - 功能要求：
   1. 使用 `getSharedPreferences("settings", MODE_PRIVATE)` 获取 `SharedPreferences` 实例。
      ```java
@@ -48,6 +48,7 @@
      SharedPreferences.Editor editor = sp.edit();
      editor.putBoolean("auto_save", true/false);
      editor.putString("user_name", "xxx");
+     editor.putString("passwd", "xxx");
      editor.apply();
      ```
   2. 打开设置界面时自动加载之前保存的配置并更新 UI。
