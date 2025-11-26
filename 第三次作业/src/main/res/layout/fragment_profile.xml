@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".fragments.ProfileFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="这是个人Fragment🧔‍♂"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/messageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="接收信息处"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/bntSentBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已收到，返回Activity" />
+
+</LinearLayout>
