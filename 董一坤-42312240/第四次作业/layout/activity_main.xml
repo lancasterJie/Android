@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    >
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入一些内容"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:textSize="20sp"
+        />
+
+    <Button
+        android:id="@+id/btn_save_to_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存到文件中"
+        />
+
+    <Button
+        android:id="@+id/btn_load_from_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="从文件中加载"
+        />
+
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        />
+</LinearLayout>
