@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">记事本实验</string>
+    <string name="default_user_name">游客</string>
+    <string name="main_title_format">%1$s 的记事本</string>
+    <string name="main_hint">在下面输入你的备忘内容，可以保存到文件或记录数据库。</string>
+    <string name="main_edit_hint">输入内容...</string>
+    <string name="action_save_file">保存到文件</string>
+    <string name="action_load_file">从文件加载</string>
+    <string name="action_save_record">保存为记录</string>
+    <string name="action_open_settings">设置</string>
+    <string name="action_open_records">记录列表</string>
+    <string name="toast_save_success">文件保存成功</string>
+    <string name="toast_load_success">文件加载成功</string>
+    <string name="toast_file_missing">文件不存在，先保存吧</string>
+    <string name="toast_load_failed">读取文件失败</string>
+    <string name="toast_save_failed">写入文件失败</string>
+    <string name="toast_empty_content">请输入内容后再保存</string>
+    <string name="toast_record_saved">记录已保存</string>
+    <string name="toast_record_failed">保存记录失败</string>
+    <string name="toast_settings_saved">设置已保存</string>
+    <string name="settings_auto_save">自动保存账户密码并自动备份文本</string>
+    <string name="settings_user_name">用户昵称</string>
+    <string name="settings_password">密码</string>
+    <string name="action_save_settings">保存设置</string>
+    <string name="action_login">Login</string>
+    <string name="records_hint">长按可删除记录，点击查看详情</string>
+    <string name="records_empty">暂无记录，先回主界面保存一条吧</string>
+    <string name="records_detail_title">记录详情</string>
+    <string name="menu_settings">设置</string>
+    <string name="menu_records">记录列表</string>
+    <string name="dialog_delete_title">删除记录</string>
+    <string name="dialog_delete_message">确定要删除该条记录吗？</string>
+    <string name="action_delete">删除</string>
+</resources>
