@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/main"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:padding="24dp"
+	android:background="#f5f5f5"
+	tools:context=".SettingActivity">
+
+	<!-- 标题 -->
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="设置界面"
+		android:textSize="24sp"
+		android:textStyle="bold"
+		android:textColor="#333333"
+		android:gravity="center"
+		android:layout_marginBottom="32dp"
+		android:layout_marginTop="64dp" />
+
+	<!-- 用户昵称输入 -->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_marginBottom="16dp">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="用户昵称"
+			android:textSize="16sp"
+			android:textColor="#666666"
+			android:layout_marginBottom="8dp" />
+		<EditText
+			android:id="@+id/et_username"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:hint="请输入用户昵称"
+
+			android:paddingTop="12dp"
+			android:paddingEnd="12dp"
+			android:paddingBottom="0dp"
+			android:textSize="16sp"
+			android:inputType="text" />
+	</LinearLayout>
+
+	<!-- 密码输入 -->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_marginBottom="24dp">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="密码"
+			android:textSize="16sp"
+			android:textColor="#666666"
+			android:layout_marginBottom="8dp" />
+		<EditText
+			android:id="@+id/et_password"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:hint="请输入密码"
+			android:paddingTop="12dp"
+			android:paddingEnd="12dp"
+			android:paddingBottom="0dp"
+			android:textSize="16sp"
+			android:inputType="textPassword" />
+	</LinearLayout>
+
+	<!-- 自动保存账户密码复选框 -->
+	<CheckBox
+		android:id="@+id/cb_auto_save"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="自动保存到文件"
+		android:textSize="16sp"
+		android:textColor="#666666"
+		android:layout_marginBottom="32dp"
+		android:checked="false" />
+
+	<!-- 登录按钮 -->
+	<Button
+		android:id="@+id/btn_login"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:text="login"
+		android:textSize="18sp"
+		android:textColor="#ffffff"
+		android:background="#4CAF50"
+		android:layout_marginTop="16dp" />
+
+</LinearLayout>
