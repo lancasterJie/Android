@@ -27,7 +27,7 @@
        fos.write(text.getBytes());
        fos.close();
        ```
-       ![保存到文件](images3/保存到文件.png)
+       ![保存到文件](images/保存到文件.png)
   2. 点击 `从文件加载` 时，从 `note.txt` 中读取文本并显示到 `EditText` 中。
      - 建议使用：
        ```java
