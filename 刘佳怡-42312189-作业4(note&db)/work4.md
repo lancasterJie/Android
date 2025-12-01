@@ -36,6 +36,7 @@
        ```
        ![FileInputStream2](images/FileInputStream2.png)
   3. 若文件不存在，需进行异常处理并给出 `Toast` 提示。
+     
        ![ERRORToast](images/ERRORToast.png)
 ### 2. 设置模块（SharedPreferences：getSharedPreferences）
 
@@ -43,6 +44,7 @@
   - 一个 `Checkbox`：是否开启“自动保存账户密码”
   - 2个 `EditText`：用户昵称和密码（例如显示在主界面标题）
   - 一个 `Button`：login跳转到其他页面
+     ![SharedPreferences](images/SharedPreferences.png)
 - 功能要求：
   1. 使用 `getSharedPreferences("settings", MODE_PRIVATE)` 获取 `SharedPreferences` 实例。
      ```java
@@ -54,9 +56,11 @@
      editor.apply();
      ```
   2. 打开设置界面时自动加载之前保存的配置并更新 UI。
+       ![autosave](images/autosave.png)
   3. 在主界面中读取 `SharedPreferences`，例如在 `onResume()` 中读取 `user_name` 并更新标题栏。
+       ![user_namesave](images/user_namesave.png)
   4. 若 `auto_save` 为开启状态，当用户返回主界面或退出应用时自动调用“保存到文件”功能。
-
+       ![auto_save2](images/auto_save2.png)
 ### 3. 数据库模块（SQLite）
 
 - 新建一个“记录列表”界面，用来展示用户保存的多条记录，例如“备忘录记录”、“操作日志”或简单“任务列表”。
