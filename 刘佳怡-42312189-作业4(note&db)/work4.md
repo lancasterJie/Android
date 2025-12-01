@@ -102,7 +102,9 @@
      - **显示记录列表**：在“记录列表”界面使用 `ListView` / `RecyclerView` 展示所有记录的 `title` 和 `time`。
      - **查看详情**：点击列表项时，跳转到详情界面，显示完整 `content`。
      - 额外加分：支持删除记录、编辑记录。
-
+       ![SQLite1](images/SQLite1.png)
+       ![SQLite2](images/SQLite2.png)
+       ![SQLite3](images/SQLite3.png)
 ---
 
 ## 三、界面与交互设计建议
