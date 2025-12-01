@@ -44,6 +44,7 @@
   - 一个 `Checkbox`：是否开启“自动保存账户密码”
   - 2个 `EditText`：用户昵称和密码（例如显示在主界面标题）
   - 一个 `Button`：login跳转到其他页面
+    
      ![SharedPreferences](images/SharedPreferences.png)
 - 功能要求：
   1. 使用 `getSharedPreferences("settings", MODE_PRIVATE)` 获取 `SharedPreferences` 实例。
@@ -56,6 +57,7 @@
      editor.apply();
      ```
   2. 打开设置界面时自动加载之前保存的配置并更新 UI。
+     
        ![autosave](images/autosave.png)
   3. 在主界面中读取 `SharedPreferences`，例如在 `onResume()` 中读取 `user_name` 并更新标题栏。
        ![user_namesave](images/user_namesave.png)
