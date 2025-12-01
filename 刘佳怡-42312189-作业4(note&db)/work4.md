@@ -34,8 +34,9 @@
        FileInputStream fis = openFileInput("note.txt");
        // 读取并转换为字符串
        ```
+       ![FileInputStream2](images/FileInputStream2.png)
   3. 若文件不存在，需进行异常处理并给出 `Toast` 提示。
-
+       ![ERRORToast](images/ERRORToast.png)
 ### 2. 设置模块（SharedPreferences：getSharedPreferences）
 
 - 在设置界面（可以是一个新的 `Activity`）中提供以下控件示例：
