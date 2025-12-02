@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- 标题栏 - 改为RelativeLayout以容纳图标 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:elevation="4dp"
+        android:padding="16dp"
+        android:shadowColor="#20000000"
+        android:shadowDx="0"
+        android:shadowDy="2"
+        android:shadowRadius="4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="论坛主页"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- 用户个人中心图标 -->
+        <ImageView
+            android:id="@+id/user_center_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_user"
+            android:contentDescription="个人中心" />
+    </RelativeLayout>
+
+    <!-- 论坛内容区域（保持不变） -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="24dp"
+                android:text="论坛内容将在这里显示"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <!-- 底部按钮区域（保持不变） -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 按钮部分保持不变 -->
+        <Button
+            android:id="@+id/goto_chat_button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/btn_common_selector"
+            android:elevation="2dp"
+            android:text="打开AI对话"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/goto_game_button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/btn_common_selector"
+            android:elevation="2dp"
+            android:text="开始方言解谜游戏"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/goto_album_button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/btn_common_selector"
+            android:elevation="2dp"
+            android:text="查看卡片图鉴"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

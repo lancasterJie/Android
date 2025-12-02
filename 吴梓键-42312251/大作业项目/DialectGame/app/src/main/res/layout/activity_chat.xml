@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 顶部标题栏 -->
+    <LinearLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_media_previous" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="AI对话"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- 聊天消息列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar"
+        android:layout_above="@+id/input_container" />
+
+    <!-- 输入区域容器 -->
+    <LinearLayout
+        android:id="@+id/input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/chat_input_edittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="输入内容..." />
+
+        <ImageButton
+            android:id="@+id/chat_voice_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:src="@android:drawable/ic_btn_speak_now" />
+
+        <ImageButton
+            android:id="@+id/chat_send_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_send" />
+    </LinearLayout>
+</RelativeLayout>

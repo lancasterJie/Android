@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="@color/background">
+
+    <!-- 成功标题 - 增强视觉突出度 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="通关成功！"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_marginBottom="24dp"
+        android:shadowColor="#407CB342"
+        android:shadowDx="0"
+        android:shadowDy="2"
+        android:shadowRadius="8"/>
+
+    <!-- 卡片展示 - 增加立体效果 -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true"
+        android:layout_marginBottom="32dp">
+
+        <ImageView
+            android:id="@+id/iv_reward_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- 文化知识 - 卡片化容器 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="地域文化小知识"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/text_primary"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardUseCompatPadding="true"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:id="@+id/tv_cultural_knowledge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:lineSpacingMultiplier="1.5"
+            android:padding="16dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- 按钮区域 - 统一按钮风格 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btn_prev"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:text="上一题"
+            android:background="@drawable/btn_common_selector"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_level_select"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:text="关卡选择"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/btn_common_selector"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:text="下一题"
+            android:background="@drawable/btn_common_selector"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btn_back_to_forum"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:text="返回论坛"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/btn_common_selector"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_go_to_album"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:text="查看图鉴"
+            android:background="@drawable/btn_common_selector"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+</LinearLayout>

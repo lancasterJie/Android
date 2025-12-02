@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="end">
+
+    <TextView
+        android:id="@+id/message_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/user_message_bg"
+        android:padding="12dp"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:textSize="12sp"
+        android:textColor="#888"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"/>
+</LinearLayout>

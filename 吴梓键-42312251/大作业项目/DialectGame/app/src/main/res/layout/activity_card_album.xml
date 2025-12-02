@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回论坛"
+        android:layout_marginBottom="16dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="方言卡片图鉴"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 卡片网格 -->
+    <!-- activity_card_album.xml 新增卡片容器样式 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_card_album"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:padding="8dp"/>
+
+    <!-- 空状态优化 -->
+    <TextView
+        android:id="@+id/tv_empty_album"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="暂无收集的卡片，快去通关游戏吧～"
+        android:textSize="18sp"
+        android:textColor="@color/text_tertiary"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="32dp"/>
+
+</LinearLayout>

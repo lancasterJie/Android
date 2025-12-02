@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="20dp">
+
+    <!-- 顶部标题栏 -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="方言翻译挑战"
+        android:textColor="@color/text_primary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 方言题目卡片 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_dialect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/card_bg"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 地区和难度信息 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_region"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="0dp" />
+
+                <TextView
+                    android:id="@+id/tv_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="方言内容"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <!-- 方言文本和语音按钮 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_dialect"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="巴适得板"
+                    android:textColor="@color/primary"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="语音"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- 提示区域卡片 -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/card_bg"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_dialect">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="提示信息"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_countdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="下次提示：20s"
+                    android:textColor="@color/text_tertiary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_hint_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/hint_bg"
+                android:lineSpacingExtra="4dp"
+                android:maxLines="5"
+                android:padding="8dp"
+                android:scrollbars="vertical"
+                android:text="暂无提示（20s后显示第一条）"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- 输入和提交区域 -->
+    <LinearLayout
+        android:id="@+id/input_submit_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入方言的普通话翻译..."
+            app:boxBackgroundColor="@color/card_bg"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxStrokeWidth="0dp"
+            app:hintTextColor="@color/text_tertiary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:padding="16dp"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/btn_submit_selector"
+            android:elevation="2dp"
+            android:text="提交答案"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
