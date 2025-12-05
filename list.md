@@ -1,71 +1,33 @@
-# Android 作业：高级 ListView 待办事项管理应用
+# Android ListView 作业：待办事项清单 (To-Do List App)
 
-## 作业目标
+## 项目概述
+创建一个简单的 Android 待办事项清单应用，使用 `ListView` 展示任务列表。用户可以看到任务列表，包括任务名称和截止日期，并支持基本的交互功能。
 
-本次作业要求学生掌握以下内容：
+## 功能要求
 
-- 使用 ListView 展示复杂数据
-- 自定义 Adapter（包含多种 ViewType）
-- 使用 convertView + ViewHolder 进行性能优化
-- 实现搜索过滤（Filterable）
-- 支持列表点击与长按事件
-- 实现数据的本地持久化（SharedPreferences / 文件 / SQLite）
+### 1. 主界面布局 (MainActivity)
+- 使用 `ListView` 作为任务列表的容器
+- 列表中的每一项显示：
+  - 任务名称（如："Complete Android Homework"）
+  - 截止日期（如："2025-12-20"）
+- 列表项之间应有清晰的分隔
 
----
+### 2. 数据模型
+创建一个 `TaskItem` 类，包含以下属性：
+- `taskName`：任务名称（String）
+- `dueDate`：截止日期（String）
 
-## 1. 主界面（MainActivity）
+### 3. 列表适配器
+创建自定义 `ArrayAdapter` 或 `BaseAdapter`：
+- 自定义列表项布局（至少包含两个 TextView）
+- 正确地将数据绑定到列表项的视图上
 
-主界面包含以下组件：
+### 4. 示例数据
+使用以下数据初始化列表（来自图片中的内容）：
 
-- EditText：用于搜索任务
-- Button：“Add Task” 跳转到添加任务界面
-- ListView：显示任务列表
-
-布局结构示例：
-
-```xml
-<LinearLayout>
-    <EditText id="etSearch" />
-    <Button id="btnAdd" text="Add Task" />
-    <ListView id="listView" />
-</LinearLayout>
-
-
-public class TaskAdapter extends BaseAdapter implements Filterable {
-
-    private List<Task> originalData;
-    private List<Task> filteredData;
-    private LayoutInflater inflater;
-
-    public TaskAdapter(Context ctx, List<Task> data) {
-        this.originalData = data;
-        this.filteredData = data;
-        this.inflater = LayoutInflater.from(ctx);
-    }
-
-    @Override
-    public int getCount() { return filteredData.size(); }
-
-    @Override
-    public Task getItem(int position) { return filteredData.get(position); }
-
-    @Override
-    public int getViewTypeCount() { return 2; }
-
-    @Override
-    public int getItemViewType(int position) {
-        return getItem(position).isImportant ? 1 : 0;
-    }
-
-    @Override
-    public View getView(int pos, View convertView, ViewGroup parent) {
-        // 学生自行实现：含 ViewHolder、convertView、多布局支持
-        return convertView;
-    }
-
-    @Override
-    public Filter getFilter() {
-        // 学生自行实现过滤逻辑
-        return null;
-    }
-}
+```java
+ArrayList<TaskItem> tasks = new ArrayList<>();
+tasks.add(new TaskItem("Complete Android Homework", "2025-12-20"));
+tasks.add(new TaskItem("Buy groceries", "2024-05-01"));
+tasks.add(new TaskItem("Walk the dog", "2024-04-20"));
+tasks.add(new TaskItem("Call John", "2024-04-23"));
