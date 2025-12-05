@@ -1,3 +1,5 @@
+![Alt text](image.jpg)
+
 # Android ListView 作业：待办事项清单 (To-Do List App)
 
 ## 项目概述
