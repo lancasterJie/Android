@@ -46,6 +46,7 @@
         android:padding="16dp">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/forum_content_area"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:cardBackgroundColor="@color/white"

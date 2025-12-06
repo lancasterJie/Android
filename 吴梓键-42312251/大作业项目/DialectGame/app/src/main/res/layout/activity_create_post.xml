@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="发布帖子"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_post_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入标题"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/et_post_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:hint="请输入内容"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_submit_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发布"/>
+
+</LinearLayout>
