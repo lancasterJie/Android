@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="任务详情页面"
+        android:textSize="40sp"
+        android:textColor="#FFFBFE"
+        android:gravity="bottom|center"
+        android:background="#6750A4"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="任务内容："
+            android:textSize="20sp"
+            />
+        <EditText
+            android:id="@+id/task_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="请输入要完成的任务内容"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="任务截止时间："
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/task_deadline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="选择的日期会在此显示"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/task_deadline_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请选择任务的截止时间"
+        android:textSize="20sp"
+        android:textColor="#FFFBFE"
+        android:layout_margin="10dp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        >
+        <CheckBox
+            android:id="@+id/isDone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="已经完成"
+            android:textSize="20sp"
+            />
+        <CheckBox
+            android:id="@+id/isImportant"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="重要事件"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加任务"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        />
+
+    <Button
+        android:id="@+id/update_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改任务"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        />
+
+</LinearLayout>
