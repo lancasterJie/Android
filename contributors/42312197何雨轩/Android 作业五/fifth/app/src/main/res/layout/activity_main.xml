@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFBF5"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/et_task_input"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="请输入关键词"
+            android:inputType="text"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:clickable="true"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:background="@android:drawable/edit_text" />
+
+        <Button
+            android:id="@+id/btn_add_task"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:text="Add Task"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_tasks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#DDDDDD"
+        android:dividerHeight="1dp"
+        android:background="#FFFBF5" />
+
+</LinearLayout>
