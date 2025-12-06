@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">待办事项清单</string>
+    <string name="task_name_label">任务名称：</string>
+    <string name="due_date_label">截止日期：</string>
+    <string name="add_task">添加任务</string>
+    <string name="delete_task">删除任务</string>
+    <string name="confirm_delete">确认删除</string>
+    <string name="cancel">取消</string>
+</resources>
