@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvDetailTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="标题"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvDetailTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="时间"
+        android:textSize="14sp"
+        android:textColor="#666"
+        android:layout_marginBottom="16dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvDetailContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="内容"
+        android:textSize="16sp"
+        android:textIsSelectable="true" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除记录"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#FF0000" />
+
+</LinearLayout>
