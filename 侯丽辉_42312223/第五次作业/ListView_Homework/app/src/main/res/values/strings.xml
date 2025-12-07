@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">待办事项清单</string>
+    <string name="title_todo_list">待办事项清单</string>
+    <string name="button_add_task">添加任务</string>
+    <string name="dialog_title_add">添加新任务</string>
+    <string name="dialog_title_edit">编辑任务</string>
+    <string name="dialog_title_delete">删除任务</string>
+    <string name="hint_task_name">任务名称</string>
+    <string name="hint_due_date">截止日期 (YYYY-MM-DD)</string>
+    <string name="button_save">保存</string>
+    <string name="button_cancel">取消</string>
+    <string name="button_delete">删除</string>
+    <string name="button_add">添加</string>
+    <string name="toast_task_added">任务添加成功</string>
+    <string name="toast_task_updated">任务更新成功</string>
+    <string name="toast_task_deleted">任务已删除</string>
+    <string name="toast_task_name_empty">任务名称不能为空</string>
+    <string name="toast_due_date_empty">截止日期不能为空</string>
+    <string name="toast_task_completed">任务状态已更新: 已完成</string>
+    <string name="toast_task_uncompleted">任务状态已更新: 未完成</string>
+    <string name="label_due_date">截止日期: %s</string>
+    <string name="dialog_delete_message">确定要删除任务 \"%s\" 吗？</string>
+</resources>

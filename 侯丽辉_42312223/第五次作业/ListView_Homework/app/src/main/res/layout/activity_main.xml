@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- 标题栏 -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="待办事项清单"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:background="#2196F3"
+        android:padding="16dp"
+        android:gravity="center" />
+
+    <!-- ListView 用于显示任务列表 -->
+    <ListView
+        android:id="@+id/listViewTasks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textViewTitle"
+        android:layout_above="@id/buttonAddTask"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:padding="8dp" />
+
+    <!-- 添加任务按钮 -->
+    <Button
+        android:id="@+id/buttonAddTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="添加任务"
+        android:textSize="18sp"
+        android:backgroundTint="#4CAF50"
+        android:textColor="@android:color/white"
+        android:padding="16dp"
+        android:layout_margin="8dp" />
+
+</RelativeLayout>
