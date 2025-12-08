@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <!-- 边框 -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/primary" /> <!-- 主色边框 -->
+    <!-- 内部填充（与背景色一致） -->
+    <solid android:color="@color/gray_f5" />
+    <!-- 大小（与头像大小一致） -->
+    <size
+        android:width="100dp"
+        android:height="100dp" />
+</shape>

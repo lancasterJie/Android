@@ -13,6 +13,10 @@ public class User {
     private String nickname;
     private String avatar;
     private long registerTime;
+    // 新增字段
+    private String gender;  // "male" 或 "female"
+    private String hometown;
+    private String email;
 
     // 构造函数、getter和setter
     public User(String username, String password, String nickname) {
@@ -21,6 +25,9 @@ public class User {
         this.nickname = nickname;
         this.registerTime = System.currentTimeMillis();
         this.avatar = "default_avatar";
+        this.gender = "";
+        this.hometown = "";
+        this.email = "";
     }
 
     // Getters and Setters
@@ -36,4 +43,12 @@ public class User {
     public void setAvatar(String avatar) { this.avatar = avatar; }
     public long getRegisterTime() { return registerTime; }
     public void setRegisterTime(long registerTime) { this.registerTime = registerTime; }
+
+    // 新增字段的getter和setter
+    public String getGender() { return gender; }
+    public void setGender(String gender) { this.gender = gender; }
+    public String getHometown() { return hometown; }
+    public void setHometown(String hometown) { this.hometown = hometown; }
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
 }

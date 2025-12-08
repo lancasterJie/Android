@@ -40,16 +40,22 @@ public class LevelSelectActivity extends AppCompatActivity {
         });
 
         // 返回按钮
-        findViewById(R.id.btn_back).setOnClickListener(v -> finish());
+        findViewById(R.id.btn_back).setOnClickListener(v -> {
+            // 启动地区选择页面
+            Intent intent = new Intent(LevelSelectActivity.this, RegionSelectActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            startActivity(intent);
+            finish();
+        });
     }
 
     // 启动答题界面
     private void startQuiz(int position) {
-        Intent intent = new Intent(this, TranslationQuizActivity.class);
-        intent.putExtra("PUZZLES", (java.io.Serializable) puzzles);
+        Intent intent = new Intent(this, PuzzleModuleSelectActivity.class);
+        intent.putExtra("PUZZLE_DATA", puzzles.get(position));
+        intent.putExtra("ALL_PUZZLES", (java.io.Serializable) puzzles);
         intent.putExtra("CURRENT_INDEX", position);
         startActivity(intent);
-        finish();
     }
 
     // 关卡适配器

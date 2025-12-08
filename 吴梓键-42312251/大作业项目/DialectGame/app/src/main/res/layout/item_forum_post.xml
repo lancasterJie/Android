@@ -1,57 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@drawable/card_border">
+    android:background="@drawable/card_bg"
+    android:layout_marginBottom="12dp"
+    android:elevation="4dp">
 
+    <!-- 帖子标题 -->
     <TextView
         android:id="@+id/tv_post_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/text_primary"/>
 
+    <!-- 帖子内容 -->
     <TextView
         android:id="@+id/tv_post_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="14sp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/text_primary"/>
 
+    <!-- 帖子底部信息（作者、时间、点赞数） -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- 左对齐：作者 -->
         <TextView
             android:id="@+id/tv_post_author"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12sp"
-            android:textColor="@color/gray"
+            android:textColor="@color/text_secondary"
             android:layout_alignParentLeft="true"/>
 
-        <!-- 右对齐：点赞数 -->
         <TextView
             android:id="@+id/tv_post_likes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12sp"
-            android:textColor="@color/gray"
+            android:textColor="@color/text_secondary"
             android:layout_alignParentRight="true"/>
 
-        <!-- 点赞数左侧：时间（右对齐且在点赞数左边） -->
         <TextView
             android:id="@+id/tv_post_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12sp"
-            android:textColor="@color/gray"
+            android:textColor="@color/text_secondary"
             android:layout_toLeftOf="@id/tv_post_likes"
-            android:layout_marginRight="16dp"/>  <!-- 与点赞数保持间距 -->
+            android:layout_marginRight="16dp"/>
     </RelativeLayout>
 
 </LinearLayout>

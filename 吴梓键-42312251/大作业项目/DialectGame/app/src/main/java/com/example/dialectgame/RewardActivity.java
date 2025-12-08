@@ -30,6 +30,7 @@ public class RewardActivity extends AppCompatActivity {
         allPuzzles = (List<DialectPuzzle>) getIntent().getSerializableExtra("ALL_PUZZLES");
         currentIndex = getIntent().getIntExtra("CURRENT_INDEX", 0);
 
+
         if (currentPuzzle == null || allPuzzles == null) {
             finish();
             return;

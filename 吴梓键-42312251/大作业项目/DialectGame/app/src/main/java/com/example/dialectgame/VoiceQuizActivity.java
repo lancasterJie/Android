@@ -16,7 +16,11 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
+import com.example.dialectgame.database.AppDatabase;
 import com.example.dialectgame.model.DialectPuzzle;
+import com.example.dialectgame.model.UserPuzzleProgress;
+import com.example.dialectgame.utils.UserManager;
 import com.iflytek.cloud.RecognizerResult;
 import com.iflytek.cloud.SpeechError;
 import com.iflytek.cloud.SpeechRecognizer;
@@ -245,18 +249,40 @@ public class VoiceQuizActivity extends AppCompatActivity {
 
         // 判断是否通关
         if (similarity >= PASS_THRESHOLD) {
-            Toast.makeText(this, "恭喜！准确度达标，通关成功～", Toast.LENGTH_SHORT).show();
-
-            // 新增跳转至奖励页面的逻辑
-            Intent intent = new Intent(this, RewardActivity.class);
-            intent.putExtra("PUZZLE_DATA", currentPuzzle);
-            intent.putExtra("ALL_PUZZLES", (java.io.Serializable) allPuzzles);
-            intent.putExtra("CURRENT_INDEX", getIntent().getIntExtra("CURRENT_INDEX", 0));
-            startActivity(intent);
-            finish(); // 关闭当前语音答题页面
+            // 通关成功，更新语音模块进度
+            updateVoiceProgress();
+            Toast.makeText(this, "语音解密成功！", Toast.LENGTH_SHORT).show();
+            finish(); // 返回模块选择页
         } else {
-            tvRecordStatus.setText("准确度未达标，请重新尝试（需达到70%以上）");
+            Toast.makeText(this, "相似度不足，请重试", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    // 在VoiceQuizActivity中添加以下方法
+    private void updateVoiceProgress() {
+        // 获取当前登录用户ID
+        int userId = UserManager.getInstance(this).getCurrentUser().getId();
+        // 获取当前谜题ID
+        String puzzleId = currentPuzzle.getId();
+        // 获取数据库实例
+        AppDatabase db = AppDatabase.getInstance(this);
+
+        // 后台线程执行数据库操作（Room不允许主线程操作数据库）
+        new Thread(() -> {
+            // 查询用户当前谜题的进度记录
+            UserPuzzleProgress progress = db.progressDao().getProgress(userId, puzzleId);
+            if (progress != null) {
+                // 更新语音模块为已完成
+                progress.setVoiceCompleted(true);
+                // 保存更新到数据库
+                db.progressDao().updateProgress(progress);
+            } else {
+                // 若进度记录不存在，创建新记录并标记语音模块完成（可选容错处理）
+                progress = new UserPuzzleProgress(userId, puzzleId);
+                progress.setVoiceCompleted(true);
+                db.progressDao().insertProgress(progress);
+            }
+        }).start();
     }
 
     /**

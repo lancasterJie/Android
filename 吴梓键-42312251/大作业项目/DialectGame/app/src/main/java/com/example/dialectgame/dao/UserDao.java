@@ -4,6 +4,7 @@ package com.example.dialectgame.dao;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update; // 新增导入
 import com.example.dialectgame.model.User;
 
 @Dao
@@ -22,4 +23,8 @@ public interface UserDao {
 
     @Query("UPDATE users SET nickname = :nickname, avatar = :avatar WHERE id = :userId")
     void updateUserInfo(int userId, String nickname, String avatar);
+
+    // 新增：用于更新整个User对象的方法
+    @Update
+    void update(User user);
 }

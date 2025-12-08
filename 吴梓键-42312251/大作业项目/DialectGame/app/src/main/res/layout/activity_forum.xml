@@ -2,39 +2,65 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/gray_f5f5f5">
 
+    <!-- 标题栏 - 增加背景和阴影提升层次感 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:shadowColor="#33000000"
+        android:shadowDx="0"
+        android:shadowDy="2"
+        android:shadowRadius="4">
 
-        <Button
-            android:id="@+id/btn_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="返回"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="方言论坛"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
-    </LinearLayout>
-
+    <!-- 返回按钮 - 使用图标更直观，添加点击反馈 -->
     <Button
-        android:id="@+id/btn_add_post"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="发布新帖子"
-        android:layout_margin="16dp"/>
+        android:id="@+id/btn_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_back"
+        android:padding="8dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:contentDescription="返回"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="方言论坛"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+</LinearLayout>
+
+    <!-- 发布按钮 - 突出显示，增加圆角和阴影 -->
+<Button
+    android:id="@+id/btn_add_post"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="发布新帖子"
+    android:layout_margin="16dp"
+    android:padding="12dp"
+    android:textSize="16sp"
+    android:textColor="@color/white"
+    android:background="@drawable/btn_post_bg"
+    android:elevation="2dp"
+    android:drawableStart="@drawable/ic_add"
+    android:drawablePadding="8dp"/>
+
+    <!-- 帖子列表 - 增加内边距和背景 -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_forum_posts"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        android:clipToPadding="false"
+        android:background="@color/gray_f5f5f5"/>
 
-</LinearLayout>
+    </LinearLayout>

@@ -4,8 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="8dp"
-    android:layout_marginBottom="8dp"
-    android:background="@drawable/comment_border">
+    android:layout_marginBottom="8dp">
 
     <TextView
         android:id="@+id/tv_comment_author"
