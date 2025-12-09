@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 按钮颜色 -->
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF6200EE</color>
+    <color name="teal_500">#FF03DAC5</color>
+    <color name="orange_500">#FF9800</color>
+    <color name="blue_500">#2196F3</color>
+    <color name="green_500">#4CAF50</color>
+    <!-- 输入框边框颜色 -->
+    <color name="gray_300">#E0E0E0</color>
+</resources>

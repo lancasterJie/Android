@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 唯一的应用主题，无任何重复 -->
+    <style name="Theme.FourthHomework" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- 主色调（标题栏、按钮等） -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <!-- 主色调变体（状态栏等） -->
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <!-- 主色调上的文字颜色 -->
+        <item name="colorOnPrimary">@android:color/white</item>
+        <!-- 强调色（输入框选中、水波纹等） -->
+        <item name="colorAccent">@color/teal_500</item>
+        <!-- 窗口背景色 -->
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+</resources>

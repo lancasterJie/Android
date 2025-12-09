@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 根标签添加 app 命名空间，绑定后才能使用 app:cornerRadius -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- 多行文本输入框（核心输入区域） -->
+<EditText
+android:id="@+id/et_note"
+android:layout_width="match_parent"
+android:layout_height="0dp"
+android:layout_weight="1"
+android:hint="请输入要保存的文本..."
+android:inputType="textMultiLine|textCapSentences"
+android:gravity="start|top"
+android:padding="12dp"
+android:textSize="16sp"
+android:background="@drawable/et_bg"
+android:layout_marginBottom="16dp"
+android:maxLines="100"
+android:scrollbars="vertical"
+android:textColorHint="@android:color/darker_gray" /> <!-- 原生提示文字颜色属性 -->
+
+    <!-- 第一行功能按钮：文件读写 + 数据库保存 -->
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:layout_marginBottom="8dp">
+
+<Button
+    android:id="@+id/btn_save"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:text="保存到文件"
+    android:layout_marginEnd="8dp"
+    android:paddingVertical="12dp"
+    android:textSize="15sp"
+    android:backgroundTint="@color/purple_500"
+    android:textColor="@android:color/white"
+    app:cornerRadius="8dp" /> <!-- 已绑定 app 命名空间，可正常识别 -->
+
+<Button
+    android:id="@+id/btn_load"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:text="从文件加载"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:paddingVertical="12dp"
+    android:textSize="15sp"
+    android:backgroundTint="@color/teal_500"
+    android:textColor="@android:color/white"
+    app:cornerRadius="8dp" />
+
+<Button
+    android:id="@+id/btn_save_db"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:text="保存到数据库"
+    android:layout_marginStart="8dp"
+    android:paddingVertical="12dp"
+    android:textSize="15sp"
+    android:backgroundTint="@color/orange_500"
+    android:textColor="@android:color/white"
+    app:cornerRadius="8dp" />
+
+</LinearLayout>
+
+    <!-- 第二行功能按钮：设置 + 查看记录 -->
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal">
+
+<Button
+    android:id="@+id/btn_settings"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:text="设置"
+    android:layout_marginEnd="8dp"
+    android:paddingVertical="12dp"
+    android:textSize="15sp"
+    android:backgroundTint="@color/blue_500"
+    android:textColor="@android:color/white"
+    app:cornerRadius="8dp" />
+
+<Button
+    android:id="@+id/btn_view_records"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:text="查看记录列表"
+    android:layout_marginStart="8dp"
+    android:paddingVertical="12dp"
+    android:textSize="15sp"
+    android:backgroundTint="@color/green_500"
+    android:textColor="@android:color/white"
+    app:cornerRadius="8dp" />
+
+</LinearLayout>
+
+    </LinearLayout>

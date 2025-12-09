@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 自动保存账户密码 Checkbox -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginVertical="8dp">
+
+        <CheckBox
+            android:id="@+id/cb_auto_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开启自动保存账户密码"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <!-- 用户昵称输入框 -->
+    <EditText
+        android:id="@+id/et_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入用户昵称"
+        android:inputType="textPersonName"
+        android:layout_marginVertical="8dp"
+        android:padding="8dp"/>
+
+    <!-- 密码输入框 -->
+    <EditText
+        android:id="@+id/et_passwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:layout_marginVertical="8dp"
+        android:padding="8dp"/>
+
+    <!-- 登录按钮（跳转示例页面） -->
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登录"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>
