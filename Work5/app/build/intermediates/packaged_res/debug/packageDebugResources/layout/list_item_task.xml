@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/iconImageView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:src="@android:drawable/ic_menu_agenda"
+        android:contentDescription="任务图标" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="任务标题"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="2024-01-01"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已完成"
+        android:textSize="14sp"
+        android:textColor="@android:color/holo_green_dark"
+        android:visibility="gone" />
+
+</LinearLayout>
+

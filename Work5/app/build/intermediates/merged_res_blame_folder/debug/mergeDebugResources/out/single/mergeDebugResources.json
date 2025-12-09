@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\layout_list_item_task.xml.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\layout\\list_item_task.xml"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\drawable_sun.png.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\drawable\\sun.png"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\mipmap-anydpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\mipmap-anydpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.work5.app-debug-31:/layout_activity_main.xml.flat",
+        "source": "com.example.work5.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\drawable_ren.png.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\drawable\\ren.png"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\drawable_bf.png.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\drawable\\bf.png"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-debug-31:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\28573\\.gradle\\daemon\\8.13\\com.example.work5.app-main-33:\\mipmap-xxhdpi\\ic_launcher.webp"
+    }
+]

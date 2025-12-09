@@ -1,0 +1,27 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable bf
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable ren
+drawable sun
+id buttonAdd
+id dateTextView
+id editTextTask
+id iconImageView
+id listView
+id listViewCompleted
+id main
+id statusTextView
+id titleTextView
+layout activity_main
+layout list_item_task
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.Work5
+style Theme.Work5
+xml backup_rules
+xml data_extraction_rules
