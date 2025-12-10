@@ -1,0 +1,34 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable radio_button_selector
+id btn_send_to_activity
+id button1
+id button2
+id button3
+id button4
+id et_input
+id main
+id myFragment
+id radioGroup
+id tv_data
+id tv_info
+id tv_state
+id tv_welcome
+layout activity_detail
+layout activity_main
+layout fragment_1
+layout fragment_2
+layout fragment_3
+layout fragment_4
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string hello_blank_fragment
+style Base.Theme.Test3
+style Theme.Test3
+xml backup_rules
+xml data_extraction_rules
