@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,7 +7,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/background">
-
     <!-- 1. 顶部标题栏 -->
     <RelativeLayout
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/iv_user_center"
+            android:id="@+id/av_user"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_alignParentRight="true"
@@ -235,29 +235,6 @@
                 android:textSize="12sp"/>
         </LinearLayout>
 
-        <!-- 我的Tab -->
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_mine"
-                android:contentDescription="我的"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="我的"
-                android:textColor="@color/text_secondary"
-                android:textSize="12sp"/>
-        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

@@ -7,10 +7,13 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.bumptech.glide.Glide;
 import com.example.dialectgame.adapter.ForumPostAdapter;
 import com.example.dialectgame.database.AppDatabase;
 import com.example.dialectgame.model.ForumPost;
+import com.example.dialectgame.model.User;
 import com.example.dialectgame.utils.UserManager;
+import java.io.File;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements ForumPostAdapter.OnPostClickListener {
@@ -18,8 +21,10 @@ public class MainActivity extends AppCompatActivity implements ForumPostAdapter.
     // 控件声明
     private RecyclerView rvBlogList;
     private ImageView ivAddPost;
+    private ImageView ivUserCenter; // 新增：用户中心头像控件
     private AppDatabase appDatabase;
     private ForumPostAdapter postAdapter;
+    private UserManager userManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +33,10 @@ public class MainActivity extends AppCompatActivity implements ForumPostAdapter.
 
         // 初始化数据库
         appDatabase = AppDatabase.getInstance(this);
+        userManager = UserManager.getInstance(this);
 
         // 检查登录状态
-        if (!UserManager.getInstance(this).isLoggedIn()) {
+        if (!userManager.isLoggedIn()) {
             startActivity(new Intent(this, LoginActivity.class));
             finish(); // 未登录时直接进入登录页，关闭首页
             return;
@@ -44,6 +50,9 @@ public class MainActivity extends AppCompatActivity implements ForumPostAdapter.
 
         // 加载帖子列表
         loadForumPosts();
+
+        // 加载用户头像
+        loadUserAvatar();
     }
 
     /**
@@ -56,6 +65,9 @@ public class MainActivity extends AppCompatActivity implements ForumPostAdapter.
 
         // 悬浮加号按钮
         ivAddPost = findViewById(R.id.iv_add_post);
+
+        // 新增：用户中心头像
+        ivUserCenter = findViewById(R.id.av_user);
     }
 
     /**
@@ -67,8 +79,8 @@ public class MainActivity extends AppCompatActivity implements ForumPostAdapter.
             startActivity(new Intent(MainActivity.this, CreatePostActivity.class));
         });
 
-        // 个人中心点击事件
-        findViewById(R.id.iv_user_center).setOnClickListener(v -> {
+        // 个人中心点击事件（修改：使用ivUserCenter控件）
+        ivUserCenter.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, UserProfileActivity.class));
         });
 
@@ -86,6 +98,25 @@ public class MainActivity extends AppCompatActivity implements ForumPostAdapter.
         findViewById(R.id.goto_album).setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, CardAlbumActivity.class));
         });
+    }
+
+    /**
+     * 加载用户头像
+     */
+    private void loadUserAvatar() {
+        User currentUser = userManager.getCurrentUser();
+        if (currentUser != null) {
+            String avatarPath = currentUser.getAvatar();
+            // 显示头像：优先使用用户上传的头像，否则使用默认头像
+            if (avatarPath != null && !avatarPath.isEmpty() && !"default_avatar".equals(avatarPath)) {
+                Glide.with(this)
+                        .load(new File(avatarPath))
+                        .circleCrop() // 圆形裁剪，与用户中心保持一致
+                        .into(ivUserCenter);
+            } else {
+                ivUserCenter.setImageResource(R.drawable.ic_user);
+            }
+        }
     }
 
     /**
@@ -114,11 +145,12 @@ public class MainActivity extends AppCompatActivity implements ForumPostAdapter.
     }
 
     /**
-     * 页面恢复时刷新帖子列表
+     * 页面恢复时刷新数据（包括头像和帖子列表）
      */
     @Override
     protected void onResume() {
         super.onResume();
         loadForumPosts();
+        loadUserAvatar(); // 每次回到主页都刷新头像
     }
 }

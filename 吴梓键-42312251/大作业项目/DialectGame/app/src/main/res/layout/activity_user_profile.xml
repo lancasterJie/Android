@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp">
 
-        <!-- 返回按钮：左上角，固定大小40dp×40dp（合适的触控大小） -->
         <Button
             android:id="@+id/btn_back"
             android:layout_width="40dp"
@@ -21,9 +20,8 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:background="@drawable/ic_back"
-            android:padding="4dp"/> <!-- 内边距调整图标显示比例 -->
+            android:padding="4dp"/>
 
-        <!-- 标题：居中显示 -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -49,16 +47,33 @@
             android:orientation="vertical"
             android:gravity="center_horizontal">
 
-            <!-- 头像 -->
-            <ImageView
-                android:id="@+id/iv_avatar"
+            <!-- 头像区域，包含相机图标 -->
+            <RelativeLayout
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginBottom="24dp"
-                android:background="@drawable/avatar_border"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_user" />
+                android:layout_marginBottom="24dp">
+
+                <ImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_user" />
+
+                <ImageView
+                    android:id="@+id/iv_edit_avatar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/circle_white_bg"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_camera"
+                    android:contentDescription="修改头像"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </RelativeLayout>
 
             <!-- 用户名 -->
             <TextView
@@ -68,6 +83,67 @@
                 android:layout_marginBottom="16dp"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
+
+            <!-- 关注和粉丝区域 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_following"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:id="@+id/tv_following_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的关注"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_followers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:id="@+id/tv_follower_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的粉丝"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
 
             <!-- 昵称输入框（带标签） -->
             <LinearLayout
@@ -93,7 +169,7 @@
                     android:hint="请输入昵称"
                     android:paddingHorizontal="16dp"
                     android:textSize="16sp"
-                    android:enabled="false"/>  <!-- 默认不可编辑 -->
+                    android:enabled="false"/>
             </LinearLayout>
 
             <!-- 性别选择 -->
@@ -117,7 +193,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:enabled="false">  <!-- 默认不可编辑 -->
+                    android:enabled="false">
 
                     <RadioButton
                         android:id="@+id/rb_male"
@@ -160,7 +236,7 @@
                     android:hint="请输入家乡"
                     android:paddingHorizontal="16dp"
                     android:textSize="16sp"
-                    android:enabled="false"/>  <!-- 默认不可编辑 -->
+                    android:enabled="false"/>
             </LinearLayout>
 
             <!-- 邮箱输入框（带标签） -->
@@ -188,7 +264,7 @@
                     android:inputType="textEmailAddress"
                     android:paddingHorizontal="16dp"
                     android:textSize="16sp"
-                    android:enabled="false"/>  <!-- 默认不可编辑 -->
+                    android:enabled="false"/>
             </LinearLayout>
 
             <!-- 操作按钮 -->

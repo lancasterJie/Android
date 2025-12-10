@@ -5,17 +5,24 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import android.content.Context;
 import com.example.dialectgame.dao.CardDao;
+import com.example.dialectgame.dao.FavoriteDao;
+import com.example.dialectgame.dao.FollowDao;
 import com.example.dialectgame.dao.ForumDao;
+import com.example.dialectgame.dao.LikeDao;
 import com.example.dialectgame.dao.ProgressDao;
 import com.example.dialectgame.dao.UserDao;
 import com.example.dialectgame.model.CollectedCard;
 import com.example.dialectgame.model.Comment;
+import com.example.dialectgame.model.Favorite;
+import com.example.dialectgame.model.Follow;
 import com.example.dialectgame.model.ForumPost;
+import com.example.dialectgame.model.Like;
 import com.example.dialectgame.model.User;
 import com.example.dialectgame.model.UserPuzzleProgress;
 
-// 更新AppDatabase.java，添加用户表
-@Database(entities = {CollectedCard.class, User.class, ForumPost.class, Comment.class, UserPuzzleProgress.class}, version = 7, exportSchema = false)
+@Database(entities = {CollectedCard.class, User.class, ForumPost.class, Comment.class,
+        UserPuzzleProgress.class, Follow.class, Like.class, Favorite.class},
+        version = 8, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
     private static volatile AppDatabase INSTANCE;
 
@@ -23,8 +30,10 @@ public abstract class AppDatabase extends RoomDatabase {
     public abstract UserDao userDao();
     public abstract ForumDao forumDao();
     public abstract ProgressDao progressDao();
+    public abstract FollowDao followDao();
+    public abstract LikeDao likeDao();
+    public abstract FavoriteDao favoriteDao();
 
-    // 单例模式获取数据库实例（代码不变）
     public static AppDatabase getInstance(Context context) {
         if (INSTANCE == null) {
             synchronized (AppDatabase.class) {
@@ -42,4 +51,5 @@ public abstract class AppDatabase extends RoomDatabase {
         }
         return INSTANCE;
     }
+
 }
