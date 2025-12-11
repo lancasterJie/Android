@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingVertical="12dp"
+    android:paddingHorizontal="0dp">
+
+    <!-- 圆点符号 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="•"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginRight="12dp" />
+
+    <!-- 任务标题 -->
+    <TextView
+        android:id="@+id/taskTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Task Title"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <!-- 任务日期和三角形 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- 任务日期 -->
+        <TextView
+            android:id="@+id/taskDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2024-04-20"
+            android:textSize="14sp"
+            android:textColor="#666666" />
+
+        <!-- 过期标记（三角形） -->
+        <TextView
+            android:id="@+id/overdueMarker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="▲"
+            android:textSize="12sp"
+            android:textColor="#FF6B6B"
+            android:visibility="gone"
+            android:layout_marginLeft="4dp" />
+    </LinearLayout>
+
+</LinearLayout>
