@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 任务名称输入框 -->
+    <EditText
+        android:id="@+id/et_task_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入任务名称"
+        android:padding="10dp"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- 截止日期输入框 -->
+    <EditText
+        android:id="@+id/et_due_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入截止日期（yyyy-mm-dd）"
+        android:padding="10dp"/>
+
+</LinearLayout>
