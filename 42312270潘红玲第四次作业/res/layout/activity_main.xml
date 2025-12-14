@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:hint="请输入内容"
+        android:inputType="textMultiLine"/>
+
+    <Button
+        android:id="@+id/btn_save_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存到文件"/>
+
+    <Button
+        android:id="@+id/btn_load_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="从文件加载"/>
+    <Button
+        android:id="@+id/btn_settings"
+        android:text="设置"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_records"
+        android:text="记录列表"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
