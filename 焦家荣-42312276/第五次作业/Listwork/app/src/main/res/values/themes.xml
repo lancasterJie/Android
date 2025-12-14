@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Listwork" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- 主颜色 -->
+        <item name="colorPrimary">#FF6200EE</item>
+        <item name="colorPrimaryVariant">#FF3700B3</item>
+        <item name="colorOnPrimary">#FFFFFFFF</item>
+
+        <!-- 次要颜色 -->
+        <item name="colorSecondary">#FF03DAC5</item>
+        <item name="colorSecondaryVariant">#FF018786</item>
+        <item name="colorOnSecondary">#FF000000</item>
+
+        <!-- 窗口背景 -->
+        <item name="android:windowBackground">#FFFFFFFF</item>
+    </style>
+</resources>
