@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#f5f5f5">
+
+        <RadioButton
+            android:id="@+id/radioHome"
+            style="@style/RadioButtonStyle"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/radioProfile"
+            style="@style/RadioButtonStyle"
+            android:text="个人资料" />
+
+        <RadioButton
+            android:id="@+id/radioSettings"
+            style="@style/RadioButtonStyle"
+            android:text="设置" />
+
+        <RadioButton
+            android:id="@+id/radioAbout"
+            style="@style/RadioButtonStyle"
+            android:text="关于" />
+
+    </RadioGroup>
+
+    <!-- 添加启动详情按钮 -->
+    <Button
+        android:id="@+id/btnStartDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:text="启动详情页面" />
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- 屏幕旋转测试区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#e0e0e0">
+
+        <EditText
+            android:id="@+id/etInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入一些内容测试屏幕旋转保存" />
+
+        <TextView
+            android:id="@+id/tvSavedData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="保存的数据将显示在这里" />
+
+    </LinearLayout>
+
+</LinearLayout>
