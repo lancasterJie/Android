@@ -49,7 +49,7 @@
 - 删除后列表自动更新，显示剩余任务
 
 [选择删除任务](images/screenshot.png)
-[任务成功删除](第五次作业/任务成功删除.png)
+[任务成功删除]([第五次作业/任务成功删除.png](https://github.com/lancasterJie/Android/blob/%E9%9F%A6%E6%80%9D%E7%9B%8842312194/%E7%AC%AC%E4%BA%94%E6%AC%A1%E4%BD%9C%E4%B8%9A/%E4%BB%BB%E5%8A%A1%E6%88%90%E5%8A%9F%E5%88%A0%E9%99%A4.png))
 
 ### 2.3 标记任务完成功能
 
