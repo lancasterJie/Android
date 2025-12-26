@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_add"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="添加任务"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_clear_completed"
+        android:title="清除已完成"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_stats"
+        android:title="任务统计"
+        app:showAsAction="never" />
+</menu>
