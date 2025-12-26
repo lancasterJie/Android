@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#62F8E0">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fragment A"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/etDataFromA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入要传递给Fragment B的数据"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnSendToFragmentB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送数据到Fragment B"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
