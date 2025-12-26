@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".SecondActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="100px"
+        android:text="Activity_2"
+        />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回到主页"
+        />
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="隐式跳转"
+        />
+    <Button
+        android:id="@+id/switchFrag1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="转换到碎片1">
+
+    </Button>
+    <Button
+        android:id="@+id/switchFrag2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="转换到碎片2">
+    </Button>
+    <FrameLayout
+        android:id="@+id/switchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+    </FrameLayout>
+</LinearLayout>
