@@ -28,9 +28,9 @@
 - 点击"添加"按钮将任务加入列表
 - 添加成功后有Toast提示
 
-[初始状态](images/screenshot.png)
-[添加任务对话框](images/screenshot.png)
-[任务成功添加](images/screenshot.png)
+[初始状态](https://github.com/lancasterJie/Android/blob/%E9%9F%A6%E6%80%9D%E7%9B%8842312194/%E7%AC%AC%E4%BA%94%E6%AC%A1%E4%BD%9C%E4%B8%9A/%E5%88%9D%E5%A7%8B%E7%8A%B6%E6%80%81.png)
+[添加任务对话框](https://github.com/lancasterJie/Android/blob/%E9%9F%A6%E6%80%9D%E7%9B%8842312194/%E7%AC%AC%E4%BA%94%E6%AC%A1%E4%BD%9C%E4%B8%9A/%E6%B7%BB%E5%8A%A0%E4%BB%BB%E5%8A%A1%E5%AF%B9%E8%AF%9D%E6%A1%86.png)
+[任务成功添加](https://github.com/lancasterJie/Android/blob/%E9%9F%A6%E6%80%9D%E7%9B%8842312194/%E7%AC%AC%E4%BA%94%E6%AC%A1%E4%BD%9C%E4%B8%9A/%E4%BB%BB%E5%8A%A1%E6%88%90%E5%8A%9F%E6%B7%BB%E5%8A%A0.png)
 
 ### 2.2 删除任务功能
 
@@ -48,8 +48,8 @@
 - 点击任务项右侧的✕按钮 → 弹出确认对话框 → 确认删除
 - 删除后列表自动更新，显示剩余任务
 
-[选择删除任务](images/screenshot.png)
-[任务成功删除]([第五次作业/任务成功删除.png](https://github.com/lancasterJie/Android/blob/%E9%9F%A6%E6%80%9D%E7%9B%8842312194/%E7%AC%AC%E4%BA%94%E6%AC%A1%E4%BD%9C%E4%B8%9A/%E4%BB%BB%E5%8A%A1%E6%88%90%E5%8A%9F%E5%88%A0%E9%99%A4.png))
+[选择删除任务](https://github.com/lancasterJie/Android/blob/%E9%9F%A6%E6%80%9D%E7%9B%8842312194/%E7%AC%AC%E4%BA%94%E6%AC%A1%E4%BD%9C%E4%B8%9A/%E9%80%89%E6%8B%A9%E5%88%A0%E9%99%A4%E4%BB%BB%E5%8A%A1.png)
+[任务成功删除](https://github.com/lancasterJie/Android/blob/%E9%9F%A6%E6%80%9D%E7%9B%8842312194/%E7%AC%AC%E4%BA%94%E6%AC%A1%E4%BD%9C%E4%B8%9A/%E4%BB%BB%E5%8A%A1%E6%88%90%E5%8A%9F%E5%88%A0%E9%99%A4.png)
 
 ### 2.3 标记任务完成功能
 
@@ -68,7 +68,7 @@
 - 未完成任务：黑色文字 + 正常显示
 - 状态变化后自动更新底部统计信息
 
-[标记任务完成](images/screenshot.png)
+[标记任务完成](https://github.com/lancasterJie/Android/blob/%E9%9F%A6%E6%80%9D%E7%9B%8842312194/%E7%AC%AC%E4%BA%94%E6%AC%A1%E4%BD%9C%E4%B8%9A/%E6%A0%87%E8%AE%B0%E4%BB%BB%E5%8A%A1%E5%AE%8C%E6%88%90.png)
 
 ## 三、实验总结
 
