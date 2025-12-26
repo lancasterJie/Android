@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/buddle_button"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <!-- 场景A: Activity → Activity -->
+
+    <Button
+        android:id="@+id/btnStartDetailActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到DetailActivity" />
+
+    <!-- 场景B: Activity ↔ Fragment -->
+
+    <Button
+        android:id="@+id/btnAddFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加Fragment" />
+
+    <TextView
+        android:id="@+id/tvFragmentResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Fragment返回结果: 暂无"
+        android:background="#f0f0f0"
+        android:padding="8dp" />
+
+    <!-- 场景C: Fragment → Fragment -->
+
+    <Button
+        android:id="@+id/btnStartFragmentCommunication"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动Fragment间通信" />
+
+
+    <!-- Fragment容器 -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="16dp"
+        android:background="#f5f5f5" />
+
+</LinearLayout>
