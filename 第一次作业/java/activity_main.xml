@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activity Navigator"
+        android:textSize="30sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--在 MainActivity 的布局文件中，添加一个名为 "跳转到 SecondActivity" 的按钮-->
+    <Button
+        android:id="@+id/SecondActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转到 SecondActivity"
+        android:textSize="20sp"
+        />
+
+    <!--在 ainActivity 的布局文件中，添加一个名为"启动带结果的跳转"的按钮-->
+    <Button
+        android:id="@+id/启动带结果的跳转"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动带结果的跳转"/>
+
+    <!--用于显示返回结果的TextView-->
+    <TextView
+        android:id="@+id/返回结果"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回结果"
+        android:textSize="20sp"/>
+
+</LinearLayout>
