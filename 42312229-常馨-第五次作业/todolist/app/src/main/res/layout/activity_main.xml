@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f5f5f5">
+
+    <!-- 自定义标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/purple_500"
+        android:elevation="4dp">
+
+        <!-- 应用标题 -->
+        <TextView
+            android:id="@+id/appTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:text="待办事项清单"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center|start"
+            android:paddingStart="16dp"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <!-- 任务统计 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/white"
+        android:elevation="2dp">
+
+        <TextView
+            android:id="@+id/taskCountTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="总任务: 0"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/completedCountTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="已完成: 0"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/green" />
+
+    </LinearLayout>
+
+    <!-- 添加任务按钮 -->
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="+ 添加新任务"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"
+        android:elevation="4dp" />
+
+    <!-- 任务列表 -->
+    <ListView
+        android:id="@+id/taskListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/light_gray"
+        android:dividerHeight="1dp"
+        android:padding="8dp" />
+
+    <!-- 底部说明 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提示：点击任务查看详情，勾选标记完成"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textColor="@color/dark_gray"
+        android:background="@color/light_gray" />
+
+</LinearLayout>

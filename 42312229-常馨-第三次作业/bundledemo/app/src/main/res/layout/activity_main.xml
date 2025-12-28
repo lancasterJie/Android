@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bundle数据传输与状态保存"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@color/purple_500"
+        android:textColor="@color/white"/>
+
+    <!-- 场景A: Activity → Activity 数据传输 -->
+    <Button
+        android:id="@+id/btn_goto_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="场景A: 跳转到DetailActivity传递数据"
+        android:padding="12dp"
+        android:layout_margin="8dp"/>
+
+    <!-- Fragment间通信按钮 -->
+    <Button
+        android:id="@+id/btn_send_to_fragment4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="场景C: 发送数据到Fragment4"
+        android:padding="12dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- 显示Fragment返回的结果 -->
+    <TextView
+        android:id="@+id/tv_fragment_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fragment返回的数据将显示在这里"
+        android:padding="12dp"
+        android:layout_margin="8dp"
+        android:background="#E8F5E8"/>
+
+    <!-- RadioGroup控制Fragment切换 -->
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <RadioButton
+            android:id="@+id/radio_fragment1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fragment1"
+            style="@style/CustomRadioButton"/>
+
+        <RadioButton
+            android:id="@+id/radio_fragment2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fragment2"
+            style="@style/CustomRadioButton"/>
+
+        <RadioButton
+            android:id="@+id/radio_fragment3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fragment3"
+            style="@style/CustomRadioButton"/>
+
+        <RadioButton
+            android:id="@+id/radio_fragment4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fragment4"
+            style="@style/CustomRadioButton"/>
+    </RadioGroup>
+
+    <!-- Fragment容器 -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

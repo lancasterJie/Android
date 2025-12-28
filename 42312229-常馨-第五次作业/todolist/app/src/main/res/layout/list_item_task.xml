@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@android:color/white"
+    android:layout_marginVertical="4dp"
+    android:elevation="2dp">
+
+    <!-- 完成状态复选框 -->
+    <CheckBox
+        android:id="@+id/completedCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="12dp" />
+
+    <!-- 任务信息 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- 任务名称 -->
+        <TextView
+            android:id="@+id/taskNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="任务名称"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="4dp" />
+
+        <!-- 截止日期 -->
+        <TextView
+            android:id="@+id/dueDateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="截止日期: 2024-01-01"
+            android:textSize="14sp"
+            android:textColor="@color/dark_gray" />
+
+    </LinearLayout>
+
+    <!-- 删除按钮 -->
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="删除"
+        android:textSize="12sp"
+        android:paddingHorizontal="8dp"
+        android:backgroundTint="@color/red"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_vertical" />
+
+</LinearLayout>

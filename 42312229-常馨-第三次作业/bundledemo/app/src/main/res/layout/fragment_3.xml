@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fragment 3"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="屏幕旋转状态保存演示"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/et_rotate_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="在这里输入文本，然后旋转屏幕"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/tv_rotate_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="旋转屏幕后，这里会显示恢复的文本"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:background="#E0E0E0"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注意：查看Logcat中的onSaveInstanceState日志"
+        android:textSize="14sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_marginTop="24dp"/>
+</LinearLayout>
