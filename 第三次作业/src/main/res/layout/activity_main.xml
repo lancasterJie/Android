@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Fragment容器 -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- 跳转详情页按钮（场景A） -->
+    <Button
+        android:id="@+id/btn_jump_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转详情页（传递数据）"
+        android:layout_margin="10dp"
+        android:background="@color/blue"
+        android:textColor="@color/white"/>
+
+    <!-- 底部导航RadioGroup -->
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="首页"
+            android:checked="true"
+            style="@style/CustomRadioButton"/>
+
+        <RadioButton
+            android:id="@+id/rb_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="消息"
+            style="@style/CustomRadioButton"/>
+
+        <RadioButton
+            android:id="@+id/rb_setting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="设置"
+            style="@style/CustomRadioButton"/>
+
+        <RadioButton
+            android:id="@+id/rb_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="我的"
+            style="@style/CustomRadioButton"/>
+    </RadioGroup>
+</LinearLayout>

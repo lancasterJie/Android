@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SimpleRadioFragment</string>
+    <string name="home">首页</string>
+    <string name="message">消息</string>
+    <string name="setting">设置</string>
+    <string name="profile">个人中心</string>
+    <string name="home_desc">这是首页页面</string>
+    <string name="message_desc">这是消息页面</string>
+    <string name="setting_desc">这是设置页面</string>
+    <string name="profile_desc">这是个人中心页面</string>
+    <string name="btn_click">点击测试</string>
+</resources>

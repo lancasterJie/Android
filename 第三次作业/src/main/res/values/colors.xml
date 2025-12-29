@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 新增：添加 blue 颜色定义（解决所有 color/blue 报错） -->
+    <color name="blue">#2196F3</color> <!-- 蓝色（与之前的 blue_500 保持一致即可） -->
+
+    <!-- 之前已添加的颜色 -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="blue_500">#2196F3</color>
+    <color name="gray_100">#F5F5F5</color>
+    <color name="gray_300">#E0E0E0</color>
+    <color name="home_bg">#E8F5E9</color>
+    <color name="message_bg">#E3F2FD</color>
+    <color name="setting_bg">#FFF8E1</color>
+    <color name="profile_bg">#F3E5F5</color>
+</resources>
