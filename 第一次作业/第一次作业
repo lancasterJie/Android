@@ -1,0 +1,59 @@
+# Activity跳转实验报告
+
+## 1. 显示跳转
+
+1. 在 `activity_main.xml` 布局文件中设置跳转到 `SecondActivity` 的跳转按钮 `button1`，设置布局为 `LinearLayout`，相关的 `orientation` 为 `vertical`，`gravity` 设置为 `center`。再新建一个 `activity` 命名为 `SecondActivity`，同上在 `activity_second.xml` 文件中设置相关参数（添加 `Button2`，返回主页）。
+
+2. 在 `MainActivity.java` 代码中，声明 `Button` 变量，并为 `button` 设置监听器；最后使用显示 `Intent(Intent(Context packageContext, Class<?> cls))` 启动 `SecondActivity`。同理在 `SecondActivity.java` 中也用同样的方法，使能够点击 `Button2` 返回主页。做完以上的设置后就可以成功实现跳转啦！
+
+以下是运行结果：
+
+![MainActivity页面效果](media/image1.png)
+
+![跳转到SecondActivity后的页面](media/image2.png)
+
+![点击SecondActivity中按钮返回主页](media/image3.png)
+
+## 2. 隐式跳转
+
+1. 第一步设置按钮等这些和显示跳转一致，不再赘述。
+
+2. 隐式跳转相对于显示跳转的不同点在于不直接指定目标完整类名，而是通过 `action`、`category`、`data` 进行匹配（分别在 `AndroidManifest.xml` 和 `SecondActivity` 中）；
+
+下面来看效果：
+
+![SecondActivity页面中未跳转](media/image2.png)
+
+![成功隐式跳转到ThirdActivity中](media/image4.png)
+
+## 3. 带结果的跳转
+
+带返回结果的跳转与显示跳转基本的设置是一致的。唯一的区别就是需要有一个 `et` 和 `tv` 来接收需要返回的结果和呈现结果，最重要的还是要加一个 `resultcode` 来构成一个验证机制。即：
+
+**带结果跳转 = 输入控件（ET）+ 显示控件（TV）+ 回传验证机制（requestCode + resultCode）+ 双向数据传递**
+
+下面来看实现效果：
+
+![未跳转的页面](media/image1.png)
+
+![跳转后的页面](media/image4.png)
+
+![跳转后输入需要返回的结果](media/image5.png)
+
+![实现带结果的跳转](media/image6.png)
+
+## 4. 加分项
+
+加分项与上不同的是：
+
+1. 在 `MainActivity` 中，为启动带结果的跳转按钮（`button4`）额外添加 `OnLongClickListener`；长按按钮时弹出 "长按可快速进入 ThirdActivity" 的 `Toast` 提示，同时通过 `return true` 阻止长按后触发点击事件，避免误跳转。
+
+2. 在 `activity_third.xml` 中添加返回取消按钮（`button5`）；在 `ThirdActivity` 中绑定 `button5`，点击时调用 `setResult(4)`（4 为 `resultCode`，标识取消操作）并执行 `finish()` 关闭页面；在 `MainActivity` 的 `onActivityResult` 中，若检测到 `resultCode = 4`，则通过 `TextView（tv）` 显示操作已取消。
+
+下面来看效果：
+
+![长按按钮出现提示](media/image7.png)
+
+![ThirdActivity中点击返回取消按钮](media/image4.png)
+
+![取消操作回到主页面](media/image8.png)
