@@ -1,0 +1,75 @@
+# Android 组件通信与状态保存综合实验报告
+
+## 一、实验目的
+1. 掌握 RadioGroup 与 Fragment 联动逻辑，实现基于单选按钮的页面切换功能。
+2. 熟练运用 Bundle 完成三种核心数据传递场景，理解组件间通信规则。
+3. 明确 onSaveInstanceState 生命周期触发时机，实现屏幕旋转时数据的持久化保存与展示。
+4. 掌握 Android 样式（Style）、选择器（Selector）的定义与使用，保障 UI 一致性与交互响应。
+
+## 二、实验内容与实现过程
+
+### （一）任务一：RadioGroup 控制 Fragment 切换
+1. **需求**：4 个 RadioButton 对应首页、消息、设置、我的 4 个 Fragment，统一样式，区分选中状态，如下图：
+
+| 首页页面 | 消息页面 | 设置页面 | 我的页面 |
+| :--- | :--- | :--- | :--- |
+| ![首页页面](1) | ![消息页面](2) | ![设置页面](3) | ![我的页面](4) |
+
+2. **实现**：
+   - 定义背景与文字颜色选择器，通过 `state_checked` 绑定选中/未选中样式。
+   - 样式文件统一 RadioButton 布局、颜色、大小等属性，隐藏默认图标。
+   - 主布局采用 FrameLayout 容器 + 横向 RadioGroup 结构。
+   - 4 个 Fragment 各有专属功能：首页展示欢迎信息、消息页提供输入功能、设置页展示接收数据、我的页模拟用户中心。
+   - 主活动初始化 Fragment，通过 RadioGroup 监听器实现 Fragment 隐藏/显示或替换切换。
+
+### （二）任务二：Bundle 数据传输
+1. **场景 A：Activity→Activity**
+   - 主活动通过 Bundle 存储用户名、年龄等数据，依附 Intent 跳转至详情活动，详情活动解析 Bundle 并展示数据。
+   - 实现效果：![场景A跳转结果](5)
+
+2. **场景 B：Activity↔Fragment**
+   - 正向：主活动通过 Fragment 的 newInstance 方法传递初始数据，Fragment 用 getArguments 接收。
+   - 反向：Fragment 定义回调接口，主活动实现接口，Fragment 触发事件后通过接口返回结果。
+   - 实现效果：![场景B 实现结果](6)
+
+3. **场景 C：Fragment→Fragment**
+   - 消息 Fragment 定义接口传递输入数据，主活动接收后创建携带数据的设置 Fragment，替换容器并同步导航状态，设置 Fragment 解析展示数据。
+   - 实现效果：
+     | 场景C发送页 | 场景C接收页 |
+     | :--- | :--- |
+     | ![场景C发送页](7) | ![场景C接收页](8) |
+
+### （三）任务三：屏幕旋转与状态保存
+1. **onSaveInstanceState 触发时机**
+   - 重写主活动与消息 Fragment 的 onPause、onSaveInstanceState、onStop 方法并打印日志，确认触发顺序为 `onPause→onSaveInstanceState→onStop`。
+
+2. **EditText 内容保存与展示**
+   - 采用 SharedPreferences 持久化存储输入内容，添加文本变化监听器实时保存。
+   - Fragment 初始化时读取存储内容恢复输入框，设置 Fragment 通过 Bundle 保留数据，旋转后正常展示。
+   - 实现效果：
+     | 旋转前 | 旋转后 | 生命周期日志 |
+     | :--- | :--- | :--- |
+     | ![旋转前](9) | ![旋转后](10) | ![生命周期图](11) |
+   - 关键日志内容：
+     ```
+     D/com.example.homework: onStop: 触发
+     D/com.example.homework: onSaveInstanceState: 触发(旋转前)
+     D/com.example.homework: onCreate: 生命周期触发
+     D/com.example.homework: onCreateView: 生命周期触发
+     D/com.example.homework: 恢复内容:1111111
+     D/com.example.homework: 实时保存内容:1111111
+     D/com.example.homework: onCreate: 生命周期触发
+     D/com.example.homework: onCreateView: 生命周期触发
+     D/com.example.homework: 恢复内容:1111111
+     ```
+
+## 三、实验难点与解决方案
+1. **Fragment 切换跳转失败**：改用 replace 方式切换 Fragment，使用立即执行事务方法，同步更新 Fragment 引用与导航状态。
+2. **旋转 270° 内容丢失**：通过文本监听器实时保存数据到 SharedPreferences，Fragment 重建时读取恢复。
+3. **RadioButton 样式与状态异常**：统一 Style 管理属性，通过 Selector 明确绑定选中/未选中状态样式。
+4. **接口回调空指针**：主活动明确实现接口，Fragment 在 onAttach 方法中绑定接口并做类型判断。
+
+## 四、实验总结
+1. Fragment 切换有 hide/show 和 replace 两种方式，Fragment 间通信需通过 Activity 中转，依赖接口回调+Bundle。
+2. 临时数据传递优先使用 Intent+Bundle，轻量级持久化首选 SharedPreferences。
+3. Selector 实现 View 状态响应，Style 保障 UI 一致性，可提升开发效率与维护性。
