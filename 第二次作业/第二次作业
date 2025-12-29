@@ -1,0 +1,38 @@
+# Activity 生命周期 Log 记录与实验总结
+## 一、 Log 输出记录
+### 1. 应用启动
+```
+MainActivity 生命周期顺序:MainActivity-onCreate->MainActivity-onStart->MainActivity-onResume
+```
+
+### 2. Main → SecondActivity
+```
+MainActivity 生命周期顺序:MainActivity-onPause->MainActivity-onStop
+SecondActivity生命周期顺序:SecondActivity-oncreate->SecondActivity-onStart->SecondActivity-onResume
+```
+
+### 3. SecondActivity 返回
+```
+SecondActivity生命周期顺序:SecondActivity-onPause->SecondActivity-onStop
+MainActivity 生命周期顺序:MainActivity-oncreate->MainActivity-onStart->MainActivity-onResume
+```
+
+### 4. Main → Dialog Activity
+```
+MainActivity 生命周期顺序:MainActivity-onPause
+DialogActivity生命周期顺序:DialogActivity-onCreate->DialogActivity-onStart->DialogActivity-onResume
+```
+
+### 5. Dialog Activity 返回
+```
+DialogActivity生命周期顺序:DialogActivity-onPause->DialogActivity-onStop->DialogActivity-onDestroy
+MainActivity 生命周期顺序:MainActivity-onResume
+```
+
+### 生命周期示意图
+![生命周期](iamage1.png)
+
+## 二、 实验总结
+Activity 生命周期的监视基本设置与之前 Activity 跳转的是一致的（比如添加 Button、添加监听器等等），只需要在对应的 Activity 里面加上生命周期的监视的 6 个函数，即`onCreate()`、`onStart()`、`onPause()`、`onStop()`、`onResume()`、`onDestroy()`。
+
+对于 Dialog Activity 的生命周期的监视，与上述不同的是需要在`AndroidManifest.xml`文件中添加一个主题，使它不会真正的跳转到 Activity 中，而是出现一个对话框的形式，然后对应的生命周期的监视函数也是与上述一致。
