@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_btn1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fragment A"
+            style="@style/RadioButtonStyle" />
+
+        <RadioButton
+            android:id="@+id/radio_btn2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fragment B"
+            style="@style/RadioButtonStyle" />
+
+        <RadioButton
+            android:id="@+id/radio_btn3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fragment C"
+            style="@style/RadioButtonStyle" />
+
+        <RadioButton
+            android:id="@+id/radio_btn4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fragment D"
+            style="@style/RadioButtonStyle" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_start_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动DetailActivity传递数据"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:id="@+id/tv_fragment_response"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Fragment返回数据将显示在这里"
+        android:textSize="14sp" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

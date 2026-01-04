@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_btn1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/RadioButtonStyle"
+            android:text="Fragment A" />
+
+        <RadioButton
+            android:id="@+id/radio_btn2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/RadioButtonStyle"
+            android:text="Fragment B" />
+
+        <RadioButton
+            android:id="@+id/radio_btn3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/RadioButtonStyle"
+            android:text="Fragment C" />
+
+        <RadioButton
+            android:id="@+id/radio_btn4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/RadioButtonStyle"
+            android:text="Fragment D" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_start_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动DetailActivity传递数据" />
+
+    <TextView
+        android:id="@+id/tv_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Fragment返回数据将显示在这里" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
