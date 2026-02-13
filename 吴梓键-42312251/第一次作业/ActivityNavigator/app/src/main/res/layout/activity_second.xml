@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:text="SecondAcyivity"/>
+
+    <Button
+        android:id="@+id/btn_back_home"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="返回到主页"/>
+
+    <Button
+        android:id="@+id/btn_implicit_jump"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="隐式跳转"/>
+
+</LinearLayout>
