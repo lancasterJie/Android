@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主色调：绿色 -->
+    <color name="button_green">#4CAF50</color>
+    <!-- 强调色：橙色 -->
+    <color name="button_orange">#FF9800</color>
+    <!-- 返回按钮颜色：蓝色 -->
+    <color name="button_blue">#2196F3</color>
+    <!-- 文字颜色：白色 -->
+    <color name="white">#FFFFFF</color>
+</resources>

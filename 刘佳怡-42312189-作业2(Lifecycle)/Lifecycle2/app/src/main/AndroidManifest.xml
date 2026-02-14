@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.lifecycle">
+
+    <application
+        android:allowBackup="true"
+        android:label="Lifecycle Demo"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- MainActivity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- SecondActivity -->
+        <activity
+            android:name=".SecondActivity"
+            android:exported="false" />
+
+        <!-- DialogActivity -->
+        <activity
+            android:name=".DialogActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+
+    </application>
+</manifest>
